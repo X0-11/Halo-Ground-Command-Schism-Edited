@@ -13,7 +13,6 @@
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0"/>
     <costType id="Build Rating" name="BR" defaultCostLimit="-1"/>
-    <costType id="Character" name="C" defaultCostLimit="-1"/>
     <costType name="Heroic Unit Slot" id="030f-722a-166e-6138" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <profileTypes>
