@@ -1,0 +1,2101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="facd-6921-0802-0ffd" name="UNSC Forces" gameSystemId="5104-0682-ee3e-9ee8" gameSystemRevision="5" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="unit" import="true" name="Commander - Captain" hidden="false" id="0fe7-4471-761a-8262">
+      <categoryLinks>
+        <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="8612-ebfe-2021-c718" primary="true" name="2. Force Commander (BG)"/>
+        <categoryLink targetId="cefc-8143-dc20-9bf8" id="1f18-b4af-7b3b-4a05" primary="false" name="2. Force Commander (OS)"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Captain" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="c370-ef9e-1243-5e79">
+          <characteristics>
+            <characteristic name="Command Dice" typeId="d60f-6f92-942f-6db0">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Standard Orders" id="b637-4e0b-1a30-866f" hidden="false">
+          <profiles>
+            <profile name="Mark Your Target!" typeId="fa83-7b97-62fd-a589" typeName="Standard Orders" hidden="false" id="455c-b792-a434-4181">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="041e-6e07-360c-6925">1 Attack</characteristic>
+                <characteristic name="Order Description" typeId="8e6a-87ff-670d-1264">Must be issued prior to any attack being made
+
+
+Once this order has been issued the player may add 2 additional attack dice to their attack dice pool (Including Melee)</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Stay Sharp!" typeId="fa83-7b97-62fd-a589" typeName="Standard Orders" hidden="false" id="66e7-011a-9bdf-916f">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="041e-6e07-360c-6925">1 Command</characteristic>
+                <characteristic name="Order Description" typeId="8e6a-87ff-670d-1264">Must be issued prior to the reaction fire roll being made.
+
+
+
+
+Once this order has been issued the player may add 1 to a unit&apos;s reaction fire dice roll result.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Take Cover!" typeId="fa83-7b97-62fd-a589" typeName="Standard Orders" hidden="false" id="9973-4d8f-e9b5-1314">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="041e-6e07-360c-6925">1 Defense</characteristic>
+                <characteristic name="Order Description" typeId="8e6a-87ff-670d-1264">Must be issued prior to an enemy&apos;s firing action&apos;s dice being rolled.
+
+
+
+
+Once this order has been issued the player may improve the cover level of a single target infantry unit by 1 level, up to a maximum of Heavy cover. Alternatively, they may target an Armored or Flying unit and increase their Soak statistic by 2.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Unique Orders" id="3875-d30c-5330-7b03" hidden="false">
+          <profiles>
+            <profile name="Not One Step Back!" typeId="8780-e06f-d1e7-76a7" typeName="Unique Orders" hidden="false" id="bdf1-9175-71f0-d7c7">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">1 Defense, 1 Command</characteristic>
+                <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Must be executed before the suppression test&apos;s dice are rolled.
+
+
+
+
+Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatically pass a suppression test.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="50"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Rifleman" hidden="false" id="fc77-7847-2844-8684">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Weapons Team" hidden="false" id="aa4b-262a-9eb6-00e7">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de12-9e06-4ad6-e5ca" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Rifleman Element" id="dddc-70e7-b466-305c" hidden="false" type="profile" targetId="c3a0-6bf1-9ce7-f841"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Heavy Machine Gun or Rocket Launcher" id="eb85-884f-3b5a-8c37" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun" hidden="false" id="7865-26be-0d58-1be7">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Machine Gun - RIfleman" hidden="false" id="ddc2-8349-f997-638f" type="selectionEntry" targetId="4fe8-8efc-2e15-8e17"/>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rocket Launchers" hidden="false" id="5112-217b-93fb-bba7">
+                  <entryLinks>
+                    <entryLink import="true" name="Rocket Launchers - Rifleman" hidden="false" id="4b48-27a2-d624-bddf" type="selectionEntry" targetId="953f-4b72-5dde-8a6d"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="12ac-3b70-e8bc-5376-min" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12ac-3b70-e8bc-5376-max" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Rifleman Element" hidden="false" id="336e-503c-8b35-842c" defaultAmount="4">
+          <infoLinks>
+            <infoLink name="Rifleman Element" id="7fb5-3ee6-2618-738f" hidden="false" type="profile" targetId="c3a0-6bf1-9ce7-f841"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="42fa-48f5-a929-af7c-min"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="42fa-48f5-a929-af7c-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenades - RIfleman" hidden="false" id="dbd3-6efb-0ce5-c712" type="selectionEntry" targetId="0d91-a582-51fa-1d68"/>
+            <entryLink import="true" name="Small Arms - Rifleman" hidden="false" id="169a-926e-2d4b-dac2" type="selectionEntry" targetId="ac5d-a08a-7d6e-2ec8"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="decrement" value="1" field="42fa-48f5-a929-af7c-min">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="aa4b-262a-9eb6-00e7" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="42fa-48f5-a929-af7c-max">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="aa4b-262a-9eb6-00e7" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+        <cost name="BR" typeId="Build Rating" value="2"/>
+        <cost name="C" typeId="Character" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="9d45-3de0-9a4c-50ae" primary="false" name="3. Infantry Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Reserves" hidden="false" id="e043-a7f1-5c37-0596">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Reserves Element" hidden="false" id="75bd-349d-525c-391d" defaultAmount="4">
+          <infoLinks>
+            <infoLink name="Reserves Element" id="3cba-e164-6caa-8ab0" hidden="false" type="profile" targetId="ba3a-ad93-3d6a-0b55"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="9a91-3ee6-2201-9093-min" includeChildSelections="true"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9a91-3ee6-2201-9093-max" includeChildSelections="true"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Small Arms - Reserves" hidden="false" id="7868-f955-f181-38e9" type="selectionEntry" targetId="0349-f877-afce-84c3"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+        <cost name="BR" typeId="Build Rating" value="1"/>
+        <cost name="C" typeId="Character" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="7a13-90cf-63c8-0908" primary="false" name="3. Infantry Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Spartan" hidden="false" id="ed80-90c7-1c6d-a9fb">
+      <costs>
+        <cost name="pts" typeId="points" value="190"/>
+        <cost name="BR" typeId="Build Rating" value="4"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic" typeId="030f-722a-166e-6138" value="1"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="UNSC Spartan" hidden="false" id="a5c4-0df7-b4c7-d35c">
+          <infoLinks>
+            <infoLink name="Spartan Element" id="3e7b-1ff6-944b-6276" hidden="false" type="profile" targetId="a1d3-70d0-bada-538f"/>
+            <infoLink name="Weapon Drop" id="8b1d-a7b2-aa2e-d1ae" hidden="false" type="profile" targetId="74f0-a91a-f3c2-59a4"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b96-716e-2c4c-5b32-min" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b96-716e-2c4c-5b32-max" includeChildSelections="true"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenades - Spartan" hidden="false" id="be51-0480-f662-d70e" type="selectionEntry" targetId="3fd2-3da6-d563-789c"/>
+            <entryLink import="true" name="Small Arms - Spartan" hidden="false" id="a0d6-bb8c-dc76-3f7c" type="selectionEntry" targetId="84d3-2071-df8c-9af5"/>
+            <entryLink import="true" name="Rocket Launcher - Spartan" hidden="false" id="9419-dd8c-d286-949c" type="selectionEntry" targetId="3706-57fe-d5d9-5e48"/>
+            <entryLink import="true" name="Spartan Laser - Spartan" hidden="false" id="4a99-9af0-20e4-f03a" type="selectionEntry" targetId="54c2-e2f6-7f8b-4c18"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Officer" hidden="false" id="6303-b796-46f0-7346">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+        <cost name="BR" typeId="Build Rating" value="2"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="1"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Officer Element" hidden="false" id="fbda-a80a-4a13-dab5" defaultAmount="1">
+          <infoLinks>
+            <infoLink name="Officer Element" id="b165-aadf-040b-44e1" hidden="false" type="profile" targetId="7a3c-81f5-0291-96b0"/>
+          </infoLinks>
+          <rules>
+            <rule name="Communications Specialist" id="a8c9-9cd7-4579-fbd6" hidden="false">
+              <description>Once per Game Turn, increase the result of a Reaction Fire test of a single unit within Commanding Presence range by +2.</description>
+            </rule>
+          </rules>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d2b4-23fc-736f-d9f2-min" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2b4-23fc-736f-d9f2-max" includeChildSelections="true"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenades - RIfleman" hidden="false" id="eddb-f6e4-1aae-e0df" type="selectionEntry" targetId="0d91-a582-51fa-1d68"/>
+            <entryLink import="true" name="Small Arms - Officer" hidden="false" id="dd2e-8caa-d5db-512b" type="selectionEntry" targetId="52ad-1e5f-1c94-e2f2"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Mechanised Infantry Battle Group" hidden="false" id="3d37-ec82-9cc6-34e6">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Requisite Units" id="2d68-2f84-da3a-582d" hidden="false" flatten="false" collapsible="true">
+          <entryLinks>
+            <entryLink import="true" name="UNSC Officer" hidden="false" id="8eb8-24e7-8650-9a50" type="selectionEntry" targetId="6303-b796-46f0-7346" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="418b-7bf7-a28a-e0f1-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="418b-7bf7-a28a-e0f1-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="UNSC Rifleman" hidden="false" id="b4f0-edf5-0784-601b" type="selectionEntry" targetId="fc77-7847-2844-8684" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="6a76-5637-8a8f-3264-min" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="6a76-5637-8a8f-3264-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="UNSC Rifleman" hidden="false" id="60a2-f9a6-382c-8efb" type="selectionEntry" targetId="fc77-7847-2844-8684" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="9c57-fa1d-5d70-2333-min" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="9c57-fa1d-5d70-2333-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="697a-7146-cd53-1706" defaultAmount="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f73-8ff9-c69b-4f80-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f73-8ff9-c69b-4f80-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Optional Infantry" hidden="false" id="d761-f404-2ae8-17e3" type="selectionEntryGroup" targetId="e5ef-991b-0183-dcd2">
+              <constraints>
+                <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="8eb8-47cc-5ea7-388f"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Armoured" hidden="false" id="1f72-4d01-c04e-7be8" type="selectionEntryGroup" targetId="14de-2e50-83e2-1c58">
+              <constraints>
+                <constraint type="max" value="8" field="selections" scope="parent" shared="true" id="74ae-e261-0bbf-bdd2"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Flyers" hidden="false" id="b3b6-f826-fd7c-b81c" type="selectionEntryGroup" targetId="ed50-00c4-ea4c-2bd9">
+              <constraints>
+                <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="5ff5-1411-1e58-1750"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="2622-52fa-29f7-96bb" id="aa68-555a-e6a5-b559" primary="true" name="3. Standard Battle Groups"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Recon Team" hidden="false" id="53b2-09b0-a811-fac1">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Recon Element" hidden="false" id="fdac-6822-fdec-a2e6" defaultAmount="2">
+          <infoLinks>
+            <infoLink name="Recon Team Element" id="02ec-a3f1-d9d6-8700" hidden="false" type="profile" targetId="399f-9ee4-0125-5e64"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f43f-c2ae-9564-0ce7-min" includeChildSelections="true"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f43f-c2ae-9564-0ce7-max" includeChildSelections="true"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenades - RIfleman" hidden="false" id="edd1-7614-d27f-1258" type="selectionEntry" targetId="0d91-a582-51fa-1d68"/>
+            <entryLink import="true" name="Small Arms - Recon" hidden="false" id="786f-e6ce-c102-2822" type="selectionEntry" targetId="161a-b9a7-bb8f-51fa"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Recon Element (Sniper Rifle)" hidden="false" id="3496-6b5e-cce6-5fba" defaultAmount="2">
+          <infoLinks>
+            <infoLink name="Recon Team Element" id="86d6-6688-1177-cc3c" hidden="false" type="profile" targetId="399f-9ee4-0125-5e64"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="acac-31df-29a6-74dd-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="acac-31df-29a6-74dd-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Sniper Rifle - Recon" hidden="false" id="0d33-fe70-fec5-7c4f" type="selectionEntry" targetId="2b9c-587f-b4dd-f1d4"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+        <cost name="BR" typeId="Build Rating" value="2"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Ranger Team" hidden="false" id="7ba1-d44b-5f6f-9d25">
+      <rules>
+        <rule name="Target Designator" id="c418-2a32-bf4b-5d36" hidden="false">
+          <description>UNSC units firing IDF weapons at targets within LoS of a Ranger Team element resolves the attack at firepower rating 4 instead of 3.</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ranger Element" hidden="false" id="0298-8ddd-aeb7-bba4" defaultAmount="4">
+          <infoLinks>
+            <infoLink name="Ranger Element" id="efbb-cdec-8c46-9882" hidden="false" type="profile" targetId="f4fd-589d-99ce-ccbe"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="2d02-4b8e-3f67-20a8-min" includeChildSelections="true"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="2d02-4b8e-3f67-20a8-max" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="decrement" value="1" field="2d02-4b8e-3f67-20a8-min">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="9078-5ac6-471c-8af3" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="2d02-4b8e-3f67-20a8-max">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="9078-5ac6-471c-8af3" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="2" field="2d02-4b8e-3f67-20a8-min">
+              <conditions>
+                <condition type="equalTo" value="2" field="selections" scope="parent" childId="9078-5ac6-471c-8af3" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="2" field="2d02-4b8e-3f67-20a8-max">
+              <conditions>
+                <condition type="equalTo" value="2" field="selections" scope="parent" childId="9078-5ac6-471c-8af3" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Flash Grenades - Ranger" hidden="false" id="0dbd-363b-c40f-b964" type="selectionEntry" targetId="bd7b-f412-3ec0-2c62"/>
+            <entryLink import="true" name="Small Arms - Ranger" hidden="false" id="2477-3b7b-64cc-6208" type="selectionEntry" targetId="37eb-3d8a-dc13-64e9"/>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ranger Snipers" hidden="false" id="9078-5ac6-471c-8af3" defaultAmount="0">
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Ranger Snipers Element" hidden="false" id="d375-88cf-26f3-e975">
+              <infoLinks>
+                <infoLink name="Ranger Element" id="1153-a281-b19b-52a3" hidden="false" type="profile" targetId="f4fd-589d-99ce-ccbe"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e10f-990f-82e9-6425-min" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e10f-990f-82e9-6425-max" includeChildSelections="true"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Sniper Rifle - Recon" hidden="false" id="2ba9-b731-d458-e79d" type="selectionEntry" targetId="2b9c-587f-b4dd-f1d4"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2a24-d906-cff8-4d46"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="170"/>
+        <cost name="BR" typeId="Build Rating" value="2"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Engineers" hidden="false" id="9ea9-8781-c781-1335">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Weapons Team" hidden="false" id="7f31-82c9-8d3c-1584">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb2e-76e8-54dc-520a" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Engineer Element" id="5f75-7ba6-057a-b25b" hidden="false" type="profile" targetId="4291-cfe5-8e5e-e914"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Heavy Machine Gun or Missile Pod" id="97fc-9023-3223-6a30" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun" hidden="false" id="cbcb-15f9-c830-9537">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Machine Gun - Engineer" hidden="false" id="c994-9b47-f085-bce3" type="selectionEntry" targetId="fff9-67aa-034d-aa26"/>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Missile Pod" hidden="false" id="fa1b-81d8-f325-d353">
+                  <entryLinks>
+                    <entryLink import="true" name="Missile Pod - Engineer" hidden="false" id="61d4-285b-94f9-4db9" type="selectionEntry" targetId="7bc3-3198-beca-fe34"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04bd-3041-71a0-d915-min" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="04bd-3041-71a0-d915-max" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Engineer Element" hidden="false" id="ca03-dbf3-638c-8f4c" defaultAmount="4">
+          <infoLinks>
+            <infoLink name="Engineer Element" id="b964-f1dc-5da1-bb53" hidden="false" type="profile" targetId="4291-cfe5-8e5e-e914"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="9169-ef2e-cc50-d11c-min"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9169-ef2e-cc50-d11c-max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="decrement" value="1" field="9169-ef2e-cc50-d11c-min">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7f31-82c9-8d3c-1584" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="9169-ef2e-cc50-d11c-max">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7f31-82c9-8d3c-1584" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenades - RIfleman" hidden="false" id="6409-1a36-0b2e-ec96" type="selectionEntry" targetId="0d91-a582-51fa-1d68"/>
+            <entryLink import="true" name="Small Arms - Engineer" hidden="false" id="87a0-7046-5894-b6b0" type="selectionEntry" targetId="649f-9c7d-2795-7d37"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+        <cost name="BR" typeId="Build Rating" value="2"/>
+        <cost name="C" typeId="Character" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="efaf-eed6-b049-e595" primary="false" name="3. Infantry Units"/>
+      </categoryLinks>
+      <comment>I&apos;ve omitted the Trip Mine ability and replaced it with grenades because there&apos;s no rules for trip mines just yet.</comment>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="UNSC Fire Support" hidden="false" id="51c5-1426-4bd9-1679">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Fire Support Element" hidden="false" id="f13d-f2e4-45db-aa24" defaultAmount="2">
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenades - RIfleman" hidden="false" id="09ca-748b-fbf7-3212" type="selectionEntry" targetId="0d91-a582-51fa-1d68"/>
+            <entryLink import="true" name="Small Arms - Rifleman" hidden="false" id="0d35-392b-7440-c4fe" type="selectionEntry" targetId="ac5d-a08a-7d6e-2ec8"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Fire Support Element" id="9d96-adf0-3d2e-d32c" hidden="false" type="profile" targetId="9e85-3a62-0775-ad5d"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="046f-9807-1c2e-c229-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="046f-9807-1c2e-c229-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Weapons Team" hidden="false" id="efc6-8f29-e3b5-c404" defaultAmount="2">
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="54c8-5d5a-cefc-f82b-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="54c8-5d5a-cefc-f82b-max" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Fire Support Element" id="3262-d5a0-b7f3-7b03" hidden="false" type="profile" targetId="9e85-3a62-0775-ad5d"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Heavy Machine Gun or Rocket Launcher" id="02e0-4fa0-03dd-4ea1" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun" hidden="false" id="a189-f4d7-d744-dcb5">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Machine Gun - RIfleman" hidden="false" id="2f9f-97ff-439b-5965" type="selectionEntry" targetId="4fe8-8efc-2e15-8e17"/>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rocket Launchers" hidden="false" id="35f5-1e7c-9adb-5209">
+                  <entryLinks>
+                    <entryLink import="true" name="Rocket Launchers - Rifleman" hidden="false" id="ed4c-446a-d55a-5ff8" type="selectionEntry" targetId="953f-4b72-5dde-8a6d"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="283a-edc8-655a-072b-min" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="283a-edc8-655a-072b-max" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="170"/>
+        <cost name="BR" typeId="Build Rating" value="2"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Frag Grenades - RIfleman" hidden="false" id="0d91-a582-51fa-1d68">
+      <infoLinks>
+        <infoLink name="Frag Grenades - Rifleman" id="b9ea-470b-39eb-7557" hidden="false" type="profile" targetId="0b67-fb0c-e6c9-d35e"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6394-4609-ce2e-7770-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6394-4609-ce2e-7770-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - Engineer" hidden="false" id="649f-9c7d-2795-7d37">
+      <infoLinks>
+        <infoLink name="Small Arms - Engineer" id="fdc2-c493-4b56-5016" hidden="false" type="profile" targetId="2d61-547b-9058-49cf"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6917-e69e-6f0d-100c-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6917-e69e-6f0d-100c-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - Rifleman" hidden="false" id="ac5d-a08a-7d6e-2ec8">
+      <infoLinks>
+        <infoLink name="Small Arms - Rifleman" id="8b87-0fa3-d6ff-0fc4" hidden="false" type="profile" targetId="385f-d7ce-7d76-8451"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e8e4-1ce0-8d89-3023-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e8e4-1ce0-8d89-3023-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - RIfleman" hidden="false" id="4fe8-8efc-2e15-8e17">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0047-e6a8-f310-c996-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0047-e6a8-f310-c996-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Machine Gun - Rifleman" id="5cb9-d074-a4f9-cfe1" hidden="false" type="profile" targetId="3c54-a423-98f9-99c5"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rocket Launchers - Rifleman" hidden="false" id="953f-4b72-5dde-8a6d">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="faa9-5f5b-5b0e-b0a6-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="faa9-5f5b-5b0e-b0a6-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Rocket Launchers - Rifleman" id="0547-55fc-4752-fc8f" hidden="false" type="profile" targetId="3640-bd62-510e-1067"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - Officer" hidden="false" id="52ad-1e5f-1c94-e2f2">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2989-fb09-2ade-3f20-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2989-fb09-2ade-3f20-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Small Arms - Officer" id="3070-b073-49f3-7a1e" hidden="false" type="profile" targetId="43a6-5565-67aa-74b1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - Ranger" hidden="false" id="37eb-3d8a-dc13-64e9">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0b83-129a-0575-c21a-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b83-129a-0575-c21a-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Small Arms - Ranger" id="3c73-b816-112a-0d68" hidden="false" type="profile" targetId="5664-4073-43b0-b4fe"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flash Grenades - Ranger" hidden="false" id="bd7b-f412-3ec0-2c62">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c45-5335-8855-1766-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c45-5335-8855-1766-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Flash Grenades - Ranger" id="6f41-233b-1561-8277" hidden="false" type="profile" targetId="93ed-bfed-65ae-aacc"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sniper Rifle - Recon" hidden="false" id="2b9c-587f-b4dd-f1d4">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="02f8-9eb4-a708-bb9f-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02f8-9eb4-a708-bb9f-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Sniper Rifle - Recon" id="0ea2-c624-30a8-b0fa" hidden="false" type="profile" targetId="1a21-9f5e-315e-07b5"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - Recon" hidden="false" id="161a-b9a7-bb8f-51fa">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ce7-49f5-3178-00e0-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ce7-49f5-3178-00e0-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Small Arms - Recon" id="2ccc-71eb-a9c8-709b" hidden="false" type="profile" targetId="d3ea-92fe-2165-3386"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - Reserves" hidden="false" id="0349-f877-afce-84c3">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a6ea-8fee-7417-fab9-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a6ea-8fee-7417-fab9-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Small Arms - Reserves" id="ed3c-4ae6-f978-96c7" hidden="false" type="profile" targetId="e5fe-cc0f-994e-cc66"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Engineer" hidden="false" id="fff9-67aa-034d-aa26">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe93-9a1d-6321-8cf0-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe93-9a1d-6321-8cf0-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Machine Gun - Engineer" id="3666-edb7-b362-72a9" hidden="false" type="profile" targetId="e16a-09af-3c0f-f00a"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Missile Pod - Engineer" hidden="false" id="7bc3-3198-beca-fe34">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8f79-a9fe-7318-7cdd-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f79-a9fe-7318-7cdd-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Missile Pod - Engineer" id="780a-1e00-03de-33d4" hidden="false" type="profile" targetId="9b9a-077d-a0db-cf55"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Frag Grenades - Spartan" hidden="false" id="3fd2-3da6-d563-789c">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="abde-bcaf-35ce-eae0-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abde-bcaf-35ce-eae0-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Frag Grenades - Spartan" id="8c77-8ea4-1450-39f2" hidden="false" type="profile" targetId="9171-1449-a9ae-acf2"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - Spartan" hidden="false" id="84d3-2071-df8c-9af5">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5164-4996-aa32-6237-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5164-4996-aa32-6237-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Small Arms - Spartan" id="022e-523b-9c98-625f" hidden="false" type="profile" targetId="095f-524a-80e4-a416"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rocket Launcher - Spartan" hidden="false" id="3706-57fe-d5d9-5e48">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6eaa-be6b-827a-b740-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6eaa-be6b-827a-b740-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Rocket Launcher - Spartan" id="a1b1-3e33-604f-baf6" hidden="false" type="profile" targetId="a50f-15a6-575c-2f83"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Spartan Laser - Spartan" hidden="false" id="54c2-e2f6-7f8b-4c18">
+      <infoLinks>
+        <infoLink name="Spartan Laser - Spartan" id="9d6e-bafa-7855-25df" hidden="false" type="profile" targetId="6a1c-536e-efac-10cd"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d1c-bbac-6f5a-8164-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d1c-bbac-6f5a-8164-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Assault Falcon" hidden="false" id="bedf-9841-25f9-44a4">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Assault Falcon Element" hidden="false" id="5435-b3b0-c73d-8bac" defaultAmount="1">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e6f9-6f2c-76b2-4ab6" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2795-dc13-5f3a-e746"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Assault Falcon Element" id="ab57-d100-fdba-2044" hidden="false" type="profile" targetId="a803-8cfa-7741-b5c3"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weaponry" id="6bd5-a22a-d35b-3458" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Machine Gun - Assault Falcon" hidden="false" id="bc11-8e3f-bf8e-18c4" type="selectionEntry" targetId="dacb-1239-cee8-4acd" defaultAmount="1" sortIndex="1"/>
+                <entryLink import="true" name="Grenade Launchers - Assault Falcon" hidden="false" id="5b88-206e-d706-5e7e" type="selectionEntry" targetId="7446-04c0-1a9d-efc9" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="88c0-474a-ba31-85dc-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="88c0-474a-ba31-85dc-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Autocannon - Assault Falcon" hidden="false" id="bb32-6e8c-a5ea-6641" type="selectionEntry" targetId="88b3-b2d9-1a1c-36ac"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="150"/>
+            <cost name="BR" typeId="Build Rating" value="2"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Autocannon - Assault Falcon" hidden="false" id="88b3-b2d9-1a1c-36ac">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f325-049d-e274-f7dd-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f325-049d-e274-f7dd-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Autocannon - Assault Falcon" id="dd8b-a5cd-24ff-a567" hidden="false" type="profile" targetId="050f-d246-faf0-9e01"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Assault Falcon" hidden="false" id="dacb-1239-cee8-4acd">
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="da27-b6d8-64cc-d187" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bcd-d06d-9083-5b99" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Machine Gun - Assault Falcon" id="ae0e-17df-1802-a7e2" hidden="false" type="profile" targetId="ff56-85f4-dd6c-faa2"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grenade Launchers - Assault Falcon" hidden="false" id="7446-04c0-1a9d-efc9">
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="fd94-b657-0bab-bbb3" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d51-18c9-6e94-9056" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Grenade Launchers - Assault Falcon" id="ea0a-08b9-5b9e-3ce6" hidden="false" type="profile" targetId="a382-2ec6-6554-2fe2"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Condor" hidden="false" id="def6-28ca-da75-f7c3">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Condor Element" hidden="false" id="0e15-ec87-72bd-fcb3">
+          <infoLinks>
+            <infoLink name="Condor Element" id="bd11-9800-1d57-91a9" hidden="false" type="profile" targetId="e9bb-21ec-8be2-203b"/>
+            <infoLink name="Dust Off" id="0e19-4fe8-2adb-8685" hidden="false" type="rule" targetId="a026-0ad6-d4b3-e373"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Autocannon - Condor" hidden="false" id="71d1-cc0b-cb87-8105" type="selectionEntry" targetId="71d5-2c30-69b0-baff"/>
+            <entryLink import="true" name="ASM Reinforcement Condor" hidden="false" id="ca17-8c59-5bdf-7c89" type="selectionEntry" targetId="dd56-afa3-03e8-5358"/>
+            <entryLink import="true" name="ASM Bunker Drop" hidden="false" id="3949-bc44-29c5-0e92" type="selectionEntry" targetId="c698-940c-516d-669f"/>
+            <entryLink import="true" name="ASM Combat Air Patrol" hidden="false" id="5c68-3828-16ff-1ef9" type="selectionEntry" targetId="03b5-08ad-27b4-cbfb"/>
+            <entryLink import="true" name="ASM Combat Drop" hidden="false" id="1e85-aceb-e3a4-dbf2" type="selectionEntry" targetId="96b1-bf9e-5aca-cc88"/>
+            <entryLink import="true" name="ASM Supply Drop" hidden="false" id="2e3b-3d7d-b4ed-eb79" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f9a-da5b-da71-6773-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f9a-da5b-da71-6773-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+        <cost name="BR" typeId="Build Rating" value="5"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Autocannon - Condor" hidden="false" id="71d5-2c30-69b0-baff">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="baed-fe7b-f277-c92c-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="baed-fe7b-f277-c92c-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Autocannon - Condor" id="8726-f425-127f-bb73" hidden="false" type="profile" targetId="72a0-4541-5aa6-5860"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Cyclops" hidden="false" id="14af-507b-e28e-d7c2">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Cyclops Element" hidden="false" id="8680-3e77-f6b6-e56b">
+          <infoLinks>
+            <infoLink name="Cyclops Element" id="2463-3fbf-153f-98a7" hidden="false" type="profile" targetId="39d7-76af-43f3-3f24"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="120"/>
+            <cost name="BR" typeId="Build Rating" value="2"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="81a4-88e2-6d95-2096"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="db04-06fd-8c46-053f"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Elephant" hidden="false" id="aa05-32ee-5893-6479">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Elephant Element" hidden="false" id="18c5-489d-951e-0c4a">
+          <entryLinks>
+            <entryLink import="true" name="Chaingun - Elephant" hidden="false" id="9a53-28a7-1545-7f39" type="selectionEntry" targetId="3d94-25e0-4b56-442b"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="UNSC Elephant" id="31e8-5d84-a9a2-8613" hidden="false" type="profile" targetId="e205-118c-9e0f-3c51"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="47b1-1480-654e-506b-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47b1-1480-654e-506b-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="400"/>
+        <cost name="BR" typeId="Build Rating" value="5"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Chaingun - Elephant" hidden="false" id="3d94-25e0-4b56-442b">
+      <infoLinks>
+        <infoLink name="Chaingun - Elephant" id="2c79-8491-44ee-910b" hidden="false" type="profile" targetId="0be7-df34-a294-3c16"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dcd5-f6aa-207d-00be-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dcd5-f6aa-207d-00be-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Chaingun - Warthog" hidden="false" id="37ab-a48b-c204-98f6">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc7c-27c8-f704-ff20-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc7c-27c8-f704-ff20-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Chaingun - Warthog" id="aa1d-2268-1a6e-5e30" hidden="false" type="profile" targetId="caca-fdbf-6eeb-43f6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Gauss Cannon - Warthog" hidden="false" id="f9bf-4707-9bf4-4ddc">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5812-9298-87f1-9ac8-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5812-9298-87f1-9ac8-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Gauss Cannon - Warthog" id="9497-3b9a-be39-0a65" hidden="false" type="profile" targetId="aedb-eb75-4f80-88aa"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rocket Launcher - Warthog" hidden="false" id="89b0-efcd-f2af-4833">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a641-32a5-a522-72a2-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a641-32a5-a522-72a2-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Rocket Launcher - Warthog" id="4162-df30-35b2-7540" hidden="false" type="profile" targetId="8531-efce-6566-d464"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Warthog" hidden="false" id="2c2f-f97c-8a0d-09e5">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Warthog Element" hidden="false" id="4969-3e62-a65e-1018">
+          <infoLinks>
+            <infoLink name="Warthog Element" id="9f5d-fafd-ff91-a8b7" hidden="false" type="profile" targetId="05cd-a94c-c0f1-88d0"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Chaingun - Warthog" hidden="false" id="9e06-1134-0890-d584" type="selectionEntry" targetId="37ab-a48b-c204-98f6"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2447-73ce-74bc-6ec9"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5860-85a2-3916-440c"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="120"/>
+            <cost name="BR" typeId="Build Rating" value="2"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Rocket Warthog" hidden="false" id="4bf4-3f24-9909-fa42">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Rocket Warthog Element" hidden="false" id="f1c5-d524-6c76-c1e5">
+          <infoLinks>
+            <infoLink name="Gauss/Rocket Warthog Element" id="fae1-2278-9aaf-dafa" hidden="false" type="profile" targetId="0269-7538-87b1-11f3"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Rocket Launcher - Warthog" hidden="false" id="fb69-918a-8b94-8aaf" type="selectionEntry" targetId="89b0-efcd-f2af-4833"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e27-fd88-d881-36fc"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="73ab-9f07-a4b6-454b"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="125"/>
+            <cost name="BR" typeId="Build Rating" value="2"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Gauss Warthog" hidden="false" id="fac9-3698-f3d5-1ef2">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Gauss Warthog Element" hidden="false" id="712e-be79-5e63-242b">
+          <infoLinks>
+            <infoLink name="Gauss/Rocket Warthog Element" id="f57d-f94e-635f-af69" hidden="false" type="profile" targetId="0269-7538-87b1-11f3"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Gauss Cannon - Warthog" hidden="false" id="3a91-bad0-4cee-f2ad" type="selectionEntry" targetId="f9bf-4707-9bf4-4ddc"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b21-12a2-f8b2-c11e"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8c98-3af8-5add-1a04"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="125"/>
+            <cost name="BR" typeId="Build Rating" value="2"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Troop Warthog" hidden="false" id="3e26-5973-9647-07bd">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Troop Warthog Element" hidden="false" id="e07a-14a4-5177-af62">
+          <infoLinks>
+            <infoLink name="Troop Warthog Element" id="13aa-4d5e-132e-576d" hidden="false" type="profile" targetId="849b-4e3e-7a5a-2f9f"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5e94-6c44-663c-6bc6"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f2d9-b6f7-503d-8ca1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="100"/>
+            <cost name="BR" typeId="Build Rating" value="2"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Kodiak" hidden="false" id="4afa-1e4e-bc47-6614">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Kodiak Element" hidden="false" id="84d0-3932-17e8-468b">
+          <infoLinks>
+            <infoLink name="Kodiak Element" id="c12c-b2da-3289-ea2b" hidden="false" type="profile" targetId="685e-89e4-92eb-f954"/>
+            <infoLink name="Specialist Canisters" id="c16c-e839-c165-b17c" hidden="false" type="profile" targetId="1a1e-158c-b101-1ac7"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Machine Gun - Kodiak" hidden="false" id="bbbb-2b19-15cb-46f6" type="selectionEntry" targetId="9c95-e9fe-6b8e-fcdf"/>
+            <entryLink import="true" name="Howitzer Cannon - Kodiak" hidden="false" id="fb5b-bd7b-a202-00d3" type="selectionEntry" targetId="1366-2933-ed58-eec8"/>
+            <entryLink import="true" name="VX7 Nerve Gas - Kodiak" hidden="false" id="6816-d274-e786-81a6" type="selectionEntry" targetId="ba97-3c5f-9e88-9151"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4095-4ee2-a508-fa79-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4095-4ee2-a508-fa79-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="250"/>
+        <cost name="BR" typeId="Build Rating" value="4"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Howitzer Cannon - Kodiak" hidden="false" id="1366-2933-ed58-eec8">
+      <infoLinks>
+        <infoLink name="Howitzer Cannon - Kodiak" id="a8f0-ff73-ee1a-cf6f" hidden="false" type="profile" targetId="5986-f937-68c3-e8a0"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7df9-13ab-0b76-ff1e-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7df9-13ab-0b76-ff1e-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="VX7 Nerve Gas - Kodiak" hidden="false" id="ba97-3c5f-9e88-9151">
+      <infoLinks>
+        <infoLink name="VX7 Nerve Gas Canister - Kodiak" id="ca2e-9db5-b84f-3b3a" hidden="false" type="profile" targetId="49cd-893c-d9a6-9381"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1847-cafc-7cef-db96-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1847-cafc-7cef-db96-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Kodiak" hidden="false" id="9c95-e9fe-6b8e-fcdf">
+      <infoLinks>
+        <infoLink name="Heavy Machine Gun - Kodiak" id="1737-d2b4-2bb1-4594" hidden="false" type="profile" targetId="94ea-295b-567f-e63a"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff71-f889-dc72-4773-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff71-f889-dc72-4773-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Guided Missiles - Longsword" hidden="false" id="7dba-a247-2cec-fd73">
+      <infoLinks>
+        <infoLink name="Guided Missiles - Longsword" id="6257-ebe2-23f8-cb22" hidden="false" type="profile" targetId="81ad-900a-6a39-c1fc"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rapid Fire Coilguns - Longsword" hidden="false" id="dd68-43e1-5d39-0883">
+      <infoLinks>
+        <infoLink name="Rapid Fire Coilguns - Longsword" id="255a-7f5c-8122-7286" hidden="false" type="profile" targetId="d2e3-f06a-281d-87bb"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c3c-c308-922a-db52-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c3c-c308-922a-db52-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Longsword" hidden="false" id="731d-5747-2626-a89e">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Longsword Element" hidden="false" id="fefb-7848-9164-cae1">
+          <infoLinks>
+            <infoLink name="Longsword Element" id="d493-9955-9934-a05f" hidden="false" type="profile" targetId="ee2f-c6f8-9891-ff92"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Rapid Fire Coilguns - Longsword" hidden="false" id="8f31-a8e1-47f2-00ce" type="selectionEntry" targetId="dd68-43e1-5d39-0883"/>
+            <entryLink import="true" name="Guided Missiles - Longsword" hidden="false" id="318e-d0a4-a1f1-2d2f" type="selectionEntry" targetId="7dba-a247-2cec-fd73">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f97-f93d-d0ff-0330-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f97-f93d-d0ff-0330-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="ASM Ground Attack" hidden="false" id="a438-1ed2-f496-de75" type="selectionEntry" targetId="9197-9826-6a28-317a"/>
+            <entryLink import="true" name="ASM Supply Drop" hidden="false" id="0231-f581-6d2b-a839" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
+            <entryLink import="true" name="ASM Combat Air Patrol" hidden="false" id="752f-9557-ba12-5db0" type="selectionEntry" targetId="03b5-08ad-27b4-cbfb"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed6f-317f-eb94-41ee-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed6f-317f-eb94-41ee-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+        <cost name="BR" typeId="Build Rating" value="3"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Mantis" hidden="false" id="3013-e692-0bd3-df3f">
+      <infoLinks>
+        <infoLink name="Heavy Machine Gun - Mantis" id="5457-003b-2830-265b" hidden="false" type="profile" targetId="fe95-2f84-cd47-6489"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8457-d2f6-6f98-c5c6-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8457-d2f6-6f98-c5c6-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Missile Pods - Mantis" hidden="false" id="716e-57b2-edc9-7da1">
+      <infoLinks>
+        <infoLink name="Missile Pods - Mantis" id="69f9-de92-ec18-5372" hidden="false" type="profile" targetId="b190-06d2-1b6b-6c4b"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb6a-2345-e1c7-396e-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb6a-2345-e1c7-396e-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Mantis" hidden="false" id="0178-081e-4f65-56e8">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Mantis Element" hidden="false" id="215d-c567-c80b-b548">
+          <infoLinks>
+            <infoLink name="Mantis Element" id="941d-5ba8-a545-c0db" hidden="false" type="profile" targetId="9346-9813-0cf1-1cf7"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Machine Gun - Mantis" hidden="false" id="bf3f-fcfd-453f-fa59" type="selectionEntry" targetId="3013-e692-0bd3-df3f"/>
+            <entryLink import="true" name="Missile Pods - Mantis" hidden="false" id="4d69-00c2-2024-5177" type="selectionEntry" targetId="716e-57b2-edc9-7da1"/>
+          </entryLinks>
+          <costs>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a65c-facf-278a-af06-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a65c-facf-278a-af06-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+        <cost name="BR" typeId="Build Rating" value="3"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Mastodon" hidden="false" id="8c5a-0216-69c4-83ee">
+      <infoLinks>
+        <infoLink name="Heavy Machine Gun - Mastodon" id="0ad5-5336-65fe-5636" hidden="false" type="profile" targetId="96db-49e0-d393-9620"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5064-b967-4b8c-2f58-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5064-b967-4b8c-2f58-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Mastodon" hidden="false" id="5a7a-535e-2653-04d0">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Mastodon Element" hidden="false" id="959d-30d2-734d-de87">
+          <infoLinks>
+            <infoLink name="Mastodon Element" id="8d2d-b0c3-4fea-7413" hidden="false" type="profile" targetId="7014-5bed-9d85-ef32"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Machine Gun - Mastodon" hidden="false" id="3f76-6c42-3e9b-5c6d" type="selectionEntry" targetId="8c5a-0216-69c4-83ee"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec63-39fe-5283-24ea-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec63-39fe-5283-24ea-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+        <cost name="BR" typeId="Build Rating" value="4"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rocket Launchers - Mongoose" hidden="false" id="86ad-54af-5df2-e8e6">
+      <infoLinks>
+        <infoLink name="Rocket Launchers - Mongoose" id="f436-8fc0-0d45-7b1c" hidden="false" type="profile" targetId="521c-9c37-30b7-0680"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f45b-1a98-c8a9-5cee-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f45b-1a98-c8a9-5cee-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Mongoose" hidden="false" id="0122-3aad-4047-8130">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Mongoose Element" hidden="false" id="ad80-870d-f1e9-ca4a">
+          <infoLinks>
+            <infoLink name="Mongoose Element" id="f5be-baa8-b16f-1598" hidden="false" type="profile" targetId="2eda-3ada-2e39-11f6"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Rocket Launchers - Mongoose" hidden="false" id="b75a-17a3-19f1-aa0a" type="selectionEntry" targetId="86ad-54af-5df2-e8e6"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb3e-cb01-bfdf-8326"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="755e-c5ad-1fe5-cf47"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="60"/>
+            <cost name="BR" typeId="Build Rating" value="1"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - ODST" hidden="false" id="9bb0-c250-e0f9-ebe6">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a00-8d49-1cc8-da1b"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1619-98b0-a073-9399"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Small Arms - ODST" id="8265-3def-d8d9-27ec" hidden="false" type="profile" targetId="3b21-b1f1-bfd1-3aa8"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Small Arms - ODST Officer" hidden="false" id="ec38-d1e9-9b91-08e6">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="83fb-39a1-d8f7-8d43"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0b6-eb70-dbc1-e93a"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Small Arms - ODST Officer" id="b015-1525-efe3-16a4" hidden="false" type="profile" targetId="162f-c3dd-558c-cccd"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Demolition Charges - ODST Air Assault" hidden="false" id="c0de-e03a-fcb6-698f">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0561-024a-e4dd-7c0b"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="34d1-6df1-2152-f783"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Demolition Charges - ODST Air Assault" id="1bf1-52df-7aa8-8d04" hidden="false" type="profile" targetId="7ec5-a9ba-3c1b-09ba"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Demolition Charges - ODST Air Assault Officer" hidden="false" id="22c8-dc13-579f-3db4">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a570-79db-9fce-427a"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0895-12c1-3e1a-a967"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Demolition Charges - ODST Air Assault Officer" id="f921-2877-ad87-d29c" hidden="false" type="profile" targetId="096e-7dad-e46c-6f83"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC ODST Air Assault " hidden="false" id="3420-7b65-598b-83e4">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="ODST Air Assault Element" hidden="false" id="530d-f8eb-6bf1-d8c7" defaultAmount="4">
+          <infoLinks>
+            <infoLink name="ODST Air Assault Element" id="4336-a105-d3ac-0656" hidden="false" type="profile" targetId="97f2-3b12-9c13-3298"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Small Arms - ODST" hidden="false" id="9645-ab6f-16d7-bb9c" type="selectionEntry" targetId="9bb0-c250-e0f9-ebe6"/>
+            <entryLink import="true" name="Demolition Charges - ODST Air Assault" hidden="false" id="73c6-b0d6-43b6-ac4c" type="selectionEntry" targetId="c0de-e03a-fcb6-698f"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="5da3-54e5-509b-ad59-min"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="5da3-54e5-509b-ad59-max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3" field="5da3-54e5-509b-ad59-min">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="42d2-c009-cbd9-a6d6" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="3" field="5da3-54e5-509b-ad59-max">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="42d2-c009-cbd9-a6d6" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="ODST Air Assault Officer (Upgrades 1 Element)" hidden="false" id="42d2-c009-cbd9-a6d6">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="ODST Air Assault Officer Element" hidden="false" id="3f4c-38e7-2370-3da0">
+              <infoLinks>
+                <infoLink name="ODST Air Assault Officer Element" id="4e39-9fc5-d3a2-b0df" hidden="false" type="profile" targetId="5dea-4e18-fbb9-9d7f"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Small Arms - ODST Officer" hidden="false" id="46fe-7a06-0cdb-db14" type="selectionEntry" targetId="ec38-d1e9-9b91-08e6"/>
+                <entryLink import="true" name="Demolition Charges - ODST Air Assault Officer" hidden="false" id="be6b-66f4-0303-d7d0" type="selectionEntry" targetId="22c8-dc13-579f-3db4"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9dd1-e4de-3153-c023-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9dd1-e4de-3153-c023-max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="455f-9bff-6bd7-5434"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+        <cost name="BR" typeId="Build Rating" value="3"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Frag Grenades - ODST" hidden="false" id="f16e-a5c7-85cb-681e">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9188-fa98-f0a8-59cb"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51f3-cb90-6e3b-5c51"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Frag Grenades - ODST" id="1979-904a-1a22-09ae" hidden="false" type="profile" targetId="7baf-646d-15d4-5135"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC ODST Fireteam" hidden="false" id="f071-2a1b-7142-087a">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="ODST Fireteam Element" hidden="false" id="567a-a917-0024-dc7b" defaultAmount="4">
+          <infoLinks>
+            <infoLink name="ODST Fireteam Element" id="558f-9bb2-8c82-2432" hidden="false" type="profile" targetId="d055-2201-0084-b3f4"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Small Arms - ODST" hidden="false" id="6d33-48ac-06b0-05ac" type="selectionEntry" targetId="9bb0-c250-e0f9-ebe6"/>
+            <entryLink import="true" name="Frag Grenades - ODST" hidden="false" id="fbdd-59a1-2b06-d18f" type="selectionEntry" targetId="f16e-a5c7-85cb-681e"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="3a8f-2dbf-d397-389b-min"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="3a8f-2dbf-d397-389b-max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3" field="3a8f-2dbf-d397-389b-min">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="8b5e-3952-c314-0b59" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="3" field="3a8f-2dbf-d397-389b-max">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="8b5e-3952-c314-0b59" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="ODST Fireteam Officer (Upgrades 1 Element)" hidden="false" id="8b5e-3952-c314-0b59">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="ODST Fireteam Officer Element" hidden="false" id="784f-19db-d5e9-654e">
+              <infoLinks>
+                <infoLink name="ODST Fireteam Officer Element" id="b5dc-9c30-ae38-cb72" hidden="false" type="profile" targetId="9476-a38d-448a-4c5e"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Small Arms - ODST Officer" hidden="false" id="79d5-65ed-2e26-1a29" type="selectionEntry" targetId="ec38-d1e9-9b91-08e6"/>
+                <entryLink import="true" name="Frag Grenades - ODST" hidden="false" id="fe88-c9ab-c03f-5adf" type="selectionEntry" targetId="f16e-a5c7-85cb-681e"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4a0-31ee-cd55-d9a8-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4a0-31ee-cd55-d9a8-max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Death From Above (Gain Orbital Insertion)" hidden="false" id="2169-883d-3142-9787">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Death From Above" id="8bff-a11e-a598-25b9" hidden="false" type="profile" targetId="bdd9-b480-eac1-dca5"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rocket/Sniper Weapons Team" hidden="false" id="4858-1dad-698c-3ca0">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="ODST Fireteam Element" hidden="false" id="de58-e37e-94f2-bd66" defaultAmount="4">
+              <infoLinks>
+                <infoLink name="ODST Fireteam Element" id="2e36-045d-d38f-433f" hidden="false" type="profile" targetId="d055-2201-0084-b3f4"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ee00-4f7a-e400-5b95"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57ee-61d9-61ff-1bf7"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Armament" id="ee31-e255-032d-8958" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Sniper Rifle - ODST" hidden="false" id="a604-b28a-7734-24f3" type="selectionEntry" targetId="91b1-e159-9f2f-c7c2"/>
+                    <entryLink import="true" name="Rocket Launchers - ODST" hidden="false" id="60cc-861c-68c7-ab2e" type="selectionEntry" targetId="6d81-838f-6471-4057"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+            <cost name="BR" typeId="Build Rating" value="0"/>
+            <cost name="C" typeId="Character" value="0"/>
+            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+        <cost name="BR" typeId="Build Rating" value="3"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sniper Rifle - ODST" hidden="false" id="91b1-e159-9f2f-c7c2">
+      <infoLinks>
+        <infoLink name="Sniper Rifle - ODST" id="f2ce-0a4f-0c5c-66ab" hidden="false" type="profile" targetId="2d83-a5c5-b2af-7b16"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rocket Launchers - ODST" hidden="false" id="6d81-838f-6471-4057">
+      <infoLinks>
+        <infoLink name="Rocket Launchers - ODST" id="cf15-4619-ee97-fee6" hidden="false" type="profile" targetId="bcfa-4ae6-f7b1-427a"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <entryLinks>
+    <entryLink import="true" name="UNSC Mechanised Infantry Battle Group" hidden="false" id="ca40-6f58-eb18-e56a" targetId="3d37-ec82-9cc6-34e6" type="selectionEntry"/>
+    <entryLink import="true" name="Commander - Captain" hidden="false" id="086a-583e-5a60-f684" targetId="0fe7-4471-761a-8262" type="selectionEntry"/>
+  </entryLinks>
+  <sharedProfiles>
+    <profile name="Small Arms - Rifleman" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="385f-d7ce-7d76-8451">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+1)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">3</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Frag Grenades - Rifleman" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="0b67-fb0c-e6c9-d35e">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Blast, Cooldown</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">3</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Machine Gun - Rifleman" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="3c54-a423-98f9-99c5">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Move or Fire, Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rocket Launchers - Rifleman" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="3640-bd62-510e-1067">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Lock On, Devastating (FLY)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">1</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">5</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - Reserves" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="e5fe-cc0f-994e-cc66">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">8&quot;/18&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+1)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">2</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Reserves Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="ba3a-ad93-3d6a-0b55">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">9/10</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">1</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">3</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af"/>
+      </characteristics>
+    </profile>
+    <profile name="Rifleman Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="c3a0-6bf1-9ce7-f841">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">7/9</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">1</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af"/>
+      </characteristics>
+    </profile>
+    <profile name="Spartan Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="a1d3-70d0-bada-538f">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Character Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">5/6</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">6</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">6/6</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Attachment (ALL), Commanding Presence (6&quot;), Heroic Save (3+), Battle Hardened (6), Fearless, Hijack, Weapon Drop</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - Spartan" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="095f-524a-80e4-a416">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+3)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">10</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">9</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">7</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Frag Grenades - Spartan" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="9171-1449-a9ae-acf2">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Blast, Cooldown</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">2</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rocket Launcher - Spartan" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="a50f-15a6-575c-2f83">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Lock On, Devastating (FLY)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">9</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">12</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Spartan Laser - Spartan" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="6a1c-536e-efac-10cd">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">5</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">15</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">5</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Officer Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="7a3c-81f5-0291-96b0">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Character Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">6/8</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">2</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Attachment (INF), Battle Hardened (1), Commanding Presence (12&quot;), Heroic Save (3+), Communications Specialist</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - Officer" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="43a6-5565-67aa-74b1">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+1)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">2</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Recon Team Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="399f-9ee4-0125-5e64">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">8&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">6/8</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">1</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Elusive</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - Recon" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="d3ea-92fe-2165-3386">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Lock On, Suppression (+1)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Sniper Rifle - Recon" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="1a21-9f5e-315e-07b5">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/30&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Cooldown, Lock On, Pinpoint (INF)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">5</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ranger Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="f4fd-589d-99ce-ccbe">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/10&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">7/8</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">2</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Advanced Deployment, Battled Hardened (1), Target Designator</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - Ranger" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="5664-4073-43b0-b4fe">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Lock On, Suppression (+1)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">3</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">0</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Flash Grenades - Ranger" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="93ed-bfed-65ae-aacc">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+3), Cooldown</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">1</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">0</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Engineer Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="4291-cfe5-8e5e-e914">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">7/9+</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">1</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Specialist Demolition, Maintenance</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - Engineer" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="2d61-547b-9058-49cf">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">8&quot;/15&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Point Blank (+1)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">2</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">2</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Missile Pod - Engineer" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="9b9a-077d-a0db-cf55">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Move or Fire, Devastating (FLY)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">1</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">6</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Machine Gun - Engineer" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="e16a-09af-3c0f-f00a">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Move or Fire, Suppression (+3)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Fire Support Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="9e85-3a62-0775-ad5d">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">8/10</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">1</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Active Overwatch</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Assault Falcon Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="a803-8cfa-7741-b5c3">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Flyer</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">12&quot;/18&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">8/9</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">-</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/6</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Active Overwatch</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Autocannon - Assault Falcon" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="050f-d246-faf0-9e01">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/15&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">3</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Machine Gun - Assault Falcon" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="ff56-85f4-dd6c-faa2">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (INF), Suppression (+3)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">L/R</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Grenade Launchers - Assault Falcon" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="a382-2ec6-6554-2fe2">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">EMP, Blast</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">L/R</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">3</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">7</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">5</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Condor Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="e9bb-21ec-8be2-203b">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Flyer</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">ASF</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">4</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">-</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">-</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/6/6</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Dust Off</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Autocannon - Condor" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="72a0-4541-5aa6-5860">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">8</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">10</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">6</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cyclops Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="39d7-76af-43f3-3f24">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Armoured</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">2</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">-/-</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">5</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4/5</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Aerial Insertion (1), Stride, Battle Hardened (2), Structural Damage, Maintenance</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="UNSC Elephant" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="e205-118c-9e0f-3c51">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">8&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">5</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">8/9</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">1</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/6/6/6</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Garrison, Super Heavy, Recovery Crane</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chaingun - Elephant" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="0be7-df34-a294-3c16">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">7</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">2</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">5</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Gauss/Rocket Warthog Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="0269-7538-87b1-11f3">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">10&quot;/15&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">8/9</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">3</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">5/5</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Troop Warthog Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="849b-4e3e-7a5a-2f9f">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">10&quot;/15&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">--/--</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">3</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">5/5</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1), Transport (1)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Warthog Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="05cd-a94c-c0f1-88d0">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">10&quot;/15&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">7/8</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">3</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">5/5</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1), Transport (1)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chaingun - Warthog" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="caca-fdbf-6eeb-43f6">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">8</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">6</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rocket Launcher - Warthog" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="8531-efce-6566-d464">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (FLY), Lock On</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">2</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">6</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Gauss Cannon - Warthog" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="aedb-eb75-4f80-88aa">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">3</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">10</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Kodiak Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="685e-89e4-92eb-f954">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">8&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">10/12</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">1</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">4/4/4</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1), Specialist Canisters</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Specialist Canisters" typeId="65d7-7a94-0584-2c1d" typeName="Unit Abilities" hidden="false" id="1a1e-158c-b101-1ac7">
+      <characteristics>
+        <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">Once per game turn, prior to any ranged attack being made, the Kodiak may choose to fire a specialist canister from it&apos;s Howitzer Cannon. If it does, the attack uses the profile of the VX7 Nerve Gas Canister instead.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Weapon Drop" typeId="65d7-7a94-0584-2c1d" typeName="Unit Abilities" hidden="false" id="74f0-a91a-f3c2-59a4">
+      <characteristics>
+        <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">If this Element makes base contact with a Supply Drop or Objective, they may elect to swap their Small Arms for any of the other Weapon Drop weapons at no additional cost.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Howitzer Cannon - Kodiak" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="5986-f937-68c3-e8a0">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">24&quot;/48&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Move or Fire, Blast, Indirect Fire</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">14</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">8</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="VX7 Nerve Gas Canister - Kodiak" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="49cd-893c-d9a6-9381">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">20&quot;/38&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Move or Fire, Indirect Fire, Suppression (+4), Danger Close</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">18</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">0</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Machine Gun - Kodiak" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="94ea-295b-567f-e63a">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Longsword Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="ee2f-c6f8-9891-ff92">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Flyer</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">ASF</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">4</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">-</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">-</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">5/4/4</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e"/>
+      </characteristics>
+    </profile>
+    <profile name="Rapid Fire Coilguns - Longsword" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="d2e3-f06a-281d-87bb">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (AIR)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">12</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Guided Missiles - Longsword" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="81ad-900a-6a39-c1fc">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">12</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mantis Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="9346-9813-0cf1-1cf7">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Armoured</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">4</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">8/10</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">4</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">6/5</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Aerial Insertion (1), Stride, Battle Hardened (2)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Machine Gun - Mantis" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="fe95-2f84-cd47-6489">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">7</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Missile Pods - Mantis" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="b190-06d2-1b6b-6c4b">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (FLY), Cooldown</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">1</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mastodon Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="7014-5bed-9d85-ef32">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">8&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">4</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">9/11</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">3</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/5/5</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1), Transport (2)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Machine Gun - Mastodon" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="96db-49e0-d393-9620">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mongoose Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="2eda-3ada-2e39-11f6">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">12&quot;/18&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">1</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">7/10</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">1</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">3/2</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (2), Diminuitive</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rocket Launchers - Mongoose" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="521c-9c37-30b7-0680">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/15&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Lock On, Devastating (FLY)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">1</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">5</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="ODST Air Assault Officer Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="5dea-4e18-fbb9-9d7f">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">6/7</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">3</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Active Overwatch, Battle Hardened (2), Heroic Save (3+), First In, Jump Packs</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - ODST" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="3b21-b1f1-bfd1-3aa8">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Point Blank, Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Demolition Charges - ODST Air Assault" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="7ec5-a9ba-3c1b-09ba">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">5&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM), Cooldown</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">2</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">4</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="ODST Air Assault Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="97f2-3b12-9c13-3298">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">6/7</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">2</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Active Overwatch, Battle Hardened (1), Heroic Save (4+), Jump Packs, Combat Specialists</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Arms - ODST Officer" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="162f-c3dd-558c-cccd">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Point Blank, Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">5</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Demolition Charges - ODST Air Assault Officer" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="096e-7dad-e46c-6f83">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">5&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM), Cooldown</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">2</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">5</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="ODST Fireteam Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="d055-2201-0084-b3f4">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">6/7</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">2</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Active Overwatch, Battle Hardened (1), Heroic Save (4+), Combat Specialists</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Frag Grenades - ODST" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="7baf-646d-15d4-5135">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Blast, Cooldown</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">2</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Sniper Rifle - ODST" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="2d83-a5c5-b2af-7b16">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/30&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Cooldown, Lock On, Pinpoint (INF)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rocket Launchers - ODST" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="bcfa-4ae6-f7b1-427a">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">12&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Lock On, Devastating (FLY)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">1</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">6</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="ODST Fireteam Officer Element" typeId="64a0-7713-dd08-5a9d" typeName="Element - Infantry" hidden="false" id="9476-a38d-448a-4c5e">
+      <characteristics>
+        <characteristic name="Type" typeId="3042-33d5-e5ca-996e">Infantry</characteristic>
+        <characteristic name="Move" typeId="a71c-3460-0bd5-85d1">6&quot;/9&quot;</characteristic>
+        <characteristic name="Soak" typeId="8f99-9d90-0ee7-5d9e">0</characteristic>
+        <characteristic name="React" typeId="8199-6003-2847-9797">5/7</characteristic>
+        <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">3</characteristic>
+        <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Active Overwatch, Battle Hardened (2), Heroic Save (3+), First In</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Optional Armoured" id="14de-2e50-83e2-1c58" hidden="false" collapsible="true">
+      <entryLinks>
+        <entryLink import="true" name="UNSC Cyclops" hidden="false" id="f4e6-2d8e-8445-d196" type="selectionEntry" targetId="14af-507b-e28e-d7c2"/>
+        <entryLink import="true" name="UNSC Elephant" hidden="false" id="ec1c-009a-977f-3610" type="selectionEntry" targetId="aa05-32ee-5893-6479"/>
+        <entryLink import="true" name="UNSC Kodiak" hidden="false" id="1af5-a468-e7be-a3bc" type="selectionEntry" targetId="4afa-1e4e-bc47-6614"/>
+        <entryLink import="true" name="UNSC Gauss Warthog" hidden="false" id="d6ac-b17b-759d-5153" type="selectionEntry" targetId="fac9-3698-f3d5-1ef2"/>
+        <entryLink import="true" name="UNSC Rocket Warthog" hidden="false" id="90a4-a5bc-990b-340e" type="selectionEntry" targetId="4bf4-3f24-9909-fa42"/>
+        <entryLink import="true" name="UNSC Warthog" hidden="false" id="2043-4595-c033-4c05" type="selectionEntry" targetId="2c2f-f97c-8a0d-09e5"/>
+        <entryLink import="true" name="UNSC Troop Warthog" hidden="false" id="9d01-5120-d11a-34a2" type="selectionEntry" targetId="3e26-5973-9647-07bd"/>
+        <entryLink import="true" name="UNSC Mantis" hidden="false" id="d641-ec82-908a-e1f8" type="selectionEntry" targetId="0178-081e-4f65-56e8"/>
+        <entryLink import="true" name="UNSC Mastodon" hidden="false" id="a43a-49a6-da3a-64be" type="selectionEntry" targetId="5a7a-535e-2653-04d0"/>
+        <entryLink import="true" name="UNSC Mongoose" hidden="false" id="e8c6-8d7f-fb4e-46bf" type="selectionEntry" targetId="0122-3aad-4047-8130"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Optional Flyers" id="ed50-00c4-ea4c-2bd9" hidden="false" collapsible="true">
+      <entryLinks>
+        <entryLink import="true" name="UNSC Assault Falcon" hidden="false" id="8d95-8c52-1f87-a527" type="selectionEntry" targetId="bedf-9841-25f9-44a4"/>
+        <entryLink import="true" name="UNSC Condor" hidden="false" id="b18a-6ef4-20ff-8876" type="selectionEntry" targetId="def6-28ca-da75-f7c3"/>
+        <entryLink import="true" name="UNSC Longsword" hidden="false" id="b3c1-edcc-c40b-4340" type="selectionEntry" targetId="731d-5747-2626-a89e"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Optional Infantry" id="e5ef-991b-0183-dcd2" hidden="false" collapsible="true">
+      <entryLinks>
+        <entryLink import="true" name="UNSC Officer" hidden="false" id="123c-68e3-7693-8e8d" type="selectionEntry" targetId="6303-b796-46f0-7346" flatten="false" collective="false" collapsible="true">
+          <categoryLinks>
+            <categoryLink name="3. Infantry Units" hidden="false" id="63fd-9a61-c2cd-6e8d" targetId="870a-81aa-e07c-3d01" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink import="true" name="UNSC Reserves" hidden="false" id="eb1e-0dcd-5a12-e5c5" type="selectionEntry" targetId="e043-a7f1-5c37-0596" flatten="false" collective="false" collapsible="true">
+          <categoryLinks>
+            <categoryLink name="3. Infantry Units" hidden="false" id="63c6-c008-7b55-05da" targetId="870a-81aa-e07c-3d01" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink import="true" name="UNSC Rifleman" hidden="false" id="13ce-19d5-4436-d984" type="selectionEntry" targetId="fc77-7847-2844-8684" flatten="false" collective="false" collapsible="true">
+          <categoryLinks>
+            <categoryLink name="3. Infantry Units" hidden="false" id="3f37-0039-88db-3195" targetId="870a-81aa-e07c-3d01" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink import="true" name="UNSC Spartan" hidden="false" id="a3a9-e312-802c-5ad1" type="selectionEntry" targetId="ed80-90c7-1c6d-a9fb" flatten="false" collective="false" collapsible="true">
+          <categoryLinks>
+            <categoryLink name="3. Infantry Units" hidden="false" id="f55f-2a3b-0e8f-cf89" targetId="870a-81aa-e07c-3d01" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink import="true" name="UNSC Recon Team" hidden="false" id="a550-4994-7217-6f5a" type="selectionEntry" targetId="53b2-09b0-a811-fac1"/>
+        <entryLink import="true" name="UNSC Ranger Team" hidden="false" id="8eb8-ecbe-1248-ec93" type="selectionEntry" targetId="7ba1-d44b-5f6f-9d25"/>
+        <entryLink import="true" name="UNSC Engineers" hidden="false" id="0aa0-ab7a-298d-758e" type="selectionEntry" targetId="9ea9-8781-c781-1335"/>
+        <entryLink import="true" name="UNSC Fire Support" hidden="false" id="f77a-d050-c447-63b7" type="selectionEntry" targetId="51c5-1426-4bd9-1679"/>
+        <entryLink import="true" name="UNSC ODST Air Assault " hidden="false" id="2123-62e4-f5b0-4d7a" type="selectionEntry" targetId="3420-7b65-598b-83e4"/>
+        <entryLink import="true" name="UNSC ODST Fireteam" hidden="false" id="bfe8-2a15-00dd-9555" type="selectionEntry" targetId="f071-2a1b-7142-087a"/>
+      </entryLinks>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>
