@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="facd-6921-0802-0ffd" name="UNSC Forces" gameSystemId="5104-0682-ee3e-9ee8" gameSystemRevision="5" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="facd-6921-0802-0ffd" name="UNSC Forces" gameSystemId="5104-0682-ee3e-9ee8" gameSystemRevision="5" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Commander - Captain" hidden="false" id="0fe7-4471-761a-8262">
+    <selectionEntry type="unit" import="true" name="Force Commander - Captain" hidden="false" id="0fe7-4471-761a-8262">
       <categoryLinks>
         <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="8612-ebfe-2021-c718" primary="true" name="2. Force Commander (BG)"/>
         <categoryLink targetId="cefc-8143-dc20-9bf8" id="1f18-b4af-7b3b-4a05" primary="false" name="2. Force Commander (OS)"/>
@@ -9,45 +9,18 @@
       <profiles>
         <profile name="Captain" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="c370-ef9e-1243-5e79">
           <characteristics>
-            <characteristic name="Command Dice" typeId="d60f-6f92-942f-6db0">3</characteristic>
+            <characteristic name="Command Dice Slots" typeId="d60f-6f92-942f-6db0">3</characteristic>
+            <characteristic name="Shared Command Dice Slots" typeId="0a6a-7d43-a7de-3666">0</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup name="Standard Orders" id="b637-4e0b-1a30-866f" hidden="false">
-          <profiles>
-            <profile name="Mark Your Target!" typeId="fa83-7b97-62fd-a589" typeName="Standard Orders" hidden="false" id="455c-b792-a434-4181">
-              <characteristics>
-                <characteristic name="Command Dice Cost" typeId="041e-6e07-360c-6925">1 Attack</characteristic>
-                <characteristic name="Order Description" typeId="8e6a-87ff-670d-1264">Must be issued prior to any attack being made
-
-
-Once this order has been issued the player may add 2 additional attack dice to their attack dice pool (Including Melee)</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Stay Sharp!" typeId="fa83-7b97-62fd-a589" typeName="Standard Orders" hidden="false" id="66e7-011a-9bdf-916f">
-              <characteristics>
-                <characteristic name="Command Dice Cost" typeId="041e-6e07-360c-6925">1 Command</characteristic>
-                <characteristic name="Order Description" typeId="8e6a-87ff-670d-1264">Must be issued prior to the reaction fire roll being made.
-
-
-
-
-Once this order has been issued the player may add 1 to a unit&apos;s reaction fire dice roll result.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Take Cover!" typeId="fa83-7b97-62fd-a589" typeName="Standard Orders" hidden="false" id="9973-4d8f-e9b5-1314">
-              <characteristics>
-                <characteristic name="Command Dice Cost" typeId="041e-6e07-360c-6925">1 Defense</characteristic>
-                <characteristic name="Order Description" typeId="8e6a-87ff-670d-1264">Must be issued prior to an enemy&apos;s firing action&apos;s dice being rolled.
-
-
-
-
-Once this order has been issued the player may improve the cover level of a single target infantry unit by 1 level, up to a maximum of Heavy cover. Alternatively, they may target an Armored or Flying unit and increase their Soak statistic by 2.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Mark Your Targets!" id="0140-1b43-4740-4457" hidden="false" type="profile" targetId="4804-1d80-5a34-a920"/>
+            <infoLink name="Stay Sharp!" id="ee22-808f-5886-8726" hidden="false" type="profile" targetId="539b-9e6d-143d-c3f7"/>
+            <infoLink name="Take Cover!" id="4323-790e-714b-55bb" hidden="false" type="profile" targetId="d2cf-9e2c-e212-18e8"/>
+          </infoLinks>
         </infoGroup>
         <infoGroup name="Unique Orders" id="3875-d30c-5330-7b03" hidden="false">
           <profiles>
@@ -55,9 +28,6 @@ Once this order has been issued the player may improve the cover level of a sing
               <characteristics>
                 <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">1 Defense, 1 Command</characteristic>
                 <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Must be executed before the suppression test&apos;s dice are rolled.
-
-
-
 
 Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatically pass a suppression test.</characteristic>
               </characteristics>
@@ -102,8 +72,8 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
                 </selectionEntry>
               </selectionEntries>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="12ac-3b70-e8bc-5376-min" includeChildSelections="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12ac-3b70-e8bc-5376-max" includeChildSelections="true"/>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="12ac-3b70-e8bc-5376-min-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="12ac-3b70-e8bc-5376-min-max" includeChildSelections="false"/>
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -140,7 +110,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="870a-81aa-e07c-3d01" id="9d45-3de0-9a4c-50ae" primary="false" name="3. Infantry Units"/>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="9d45-3de0-9a4c-50ae" primary="true" name="3. Infantry Units"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Reserves" hidden="false" id="e043-a7f1-5c37-0596">
@@ -164,7 +134,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="870a-81aa-e07c-3d01" id="7a13-90cf-63c8-0908" primary="false" name="3. Infantry Units"/>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="7a13-90cf-63c8-0908" primary="true" name="3. Infantry Units"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Spartan" hidden="false" id="ed80-90c7-1c6d-a9fb">
@@ -178,7 +148,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <selectionEntry type="model" import="true" name="UNSC Spartan" hidden="false" id="a5c4-0df7-b4c7-d35c">
           <infoLinks>
             <infoLink name="Spartan Element" id="3e7b-1ff6-944b-6276" hidden="false" type="profile" targetId="a1d3-70d0-bada-538f"/>
-            <infoLink name="Weapon Drop" id="8b1d-a7b2-aa2e-d1ae" hidden="false" type="profile" targetId="74f0-a91a-f3c2-59a4"/>
+            <infoLink name="Weapon Drop" id="8b1d-a7b2-aa2e-d1ae" hidden="false" type="profile" targetId="71dd-3720-8268-5db1"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b96-716e-2c4c-5b32-min" includeChildSelections="true"/>
@@ -192,6 +162,20 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Death From Above (Gain Orbital Insertion) - Heroic" hidden="false" id="41cb-c56e-b686-5b17" type="selectionEntry" targetId="2554-091d-4cbd-92ec">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7fa6-4640-b4bb-cd8d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="efd5-57ed-a7e2-6db8" primary="true" name="3. Infantry Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Officer" hidden="false" id="6303-b796-46f0-7346">
       <costs>
@@ -220,8 +204,22 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Death From Above (Gain Orbital Insertion) - Heroic" hidden="false" id="4a4e-ba0f-73d0-e96d" type="selectionEntry" targetId="2554-091d-4cbd-92ec">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7fa6-4640-b4bb-cd8d" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="1cf3-5c25-20bc-fc2e" primary="true" name="3. Infantry Units"/>
+      </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="UNSC Mechanised Infantry Battle Group" hidden="false" id="3d37-ec82-9cc6-34e6">
+    <selectionEntry type="unit" import="true" name="Battle Group - UNSC Mechanised Infantry" hidden="false" id="3d37-ec82-9cc6-34e6">
       <selectionEntryGroups>
         <selectionEntryGroup name="Requisite Units" id="2d68-2f84-da3a-582d" hidden="false" flatten="false" collapsible="true">
           <entryLinks>
@@ -231,48 +229,59 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
                 <constraint type="max" value="1" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="418b-7bf7-a28a-e0f1-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="UNSC Rifleman" hidden="false" id="b4f0-edf5-0784-601b" type="selectionEntry" targetId="fc77-7847-2844-8684" defaultAmount="1">
-              <constraints>
-                <constraint type="min" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="6a76-5637-8a8f-3264-min" includeChildSelections="false"/>
-                <constraint type="max" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="6a76-5637-8a8f-3264-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="UNSC Rifleman" hidden="false" id="60a2-f9a6-382c-8efb" type="selectionEntry" targetId="fc77-7847-2844-8684" defaultAmount="1">
-              <constraints>
-                <constraint type="min" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="9c57-fa1d-5d70-2333-min" includeChildSelections="false"/>
-                <constraint type="max" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="9c57-fa1d-5d70-2333-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Rifleman or Fire Support" id="92a1-a63e-67a0-f323" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="UNSC Rifleman" hidden="false" id="0496-9e43-9630-c627" type="selectionEntry" targetId="fc77-7847-2844-8684" defaultAmount="2">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="31bd-f4a5-3b95-0dee" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="2d68-2f84-da3a-582d" shared="true" id="5b51-53b6-d4fb-a80b" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="UNSC Fire Support" hidden="false" id="4a77-e084-d8f1-00d3" type="selectionEntry" targetId="51c5-1426-4bd9-1679" defaultAmount="0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eaee-ad2f-782a-0824"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0f79-582d-4a8d-261c"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="self" shared="true" id="2c78-f0b5-a645-6d80-min"/>
+                <constraint type="max" value="2" field="selections" scope="self" shared="true" id="2c78-f0b5-a645-6d80-max"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="697a-7146-cd53-1706" defaultAmount="1">
+        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="9912-ba34-991e-99f2">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f73-8ff9-c69b-4f80-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f73-8ff9-c69b-4f80-max"/>
+            <constraint type="max" value="1" field="030f-722a-166e-6138" scope="parent" shared="true" id="3a0f-1f30-5f79-1e57" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6367-ca85-ad5d-b2a3-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6367-ca85-ad5d-b2a3-max"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Optional Infantry" hidden="false" id="d761-f404-2ae8-17e3" type="selectionEntryGroup" targetId="e5ef-991b-0183-dcd2">
+            <entryLink import="true" name="Optional Armoured" hidden="false" id="0fa8-b946-19b3-3f19" type="selectionEntryGroup" targetId="e3f5-3826-0250-f6b3">
               <constraints>
-                <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="8eb8-47cc-5ea7-388f"/>
+                <constraint type="max" value="8" field="Build Rating" scope="self" shared="true" id="b02c-2e3a-5ce0-763c" includeChildSelections="true"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Optional Armoured" hidden="false" id="1f72-4d01-c04e-7be8" type="selectionEntryGroup" targetId="14de-2e50-83e2-1c58">
+            <entryLink import="true" name="Optional Flyers" hidden="false" id="08d7-ad02-f0b1-bcf8" type="selectionEntryGroup" targetId="c9bb-efb0-5342-62ef">
               <constraints>
-                <constraint type="max" value="8" field="selections" scope="parent" shared="true" id="74ae-e261-0bbf-bdd2"/>
+                <constraint type="max" value="6" field="Build Rating" scope="self" shared="true" id="3162-f1f8-0016-f0e4" includeChildSelections="true"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Optional Flyers" hidden="false" id="b3b6-f826-fd7c-b81c" type="selectionEntryGroup" targetId="ed50-00c4-ea4c-2bd9">
+            <entryLink import="true" name="Optional Infantry" hidden="false" id="1361-e500-afc1-9eed" type="selectionEntryGroup" targetId="28d3-b0b4-398a-9349">
               <constraints>
-                <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="5ff5-1411-1e58-1750"/>
+                <constraint type="max" value="6" field="Build Rating" scope="self" shared="true" id="3a8f-612e-e33b-fffe" includeChildSelections="true"/>
               </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
-        <categoryLink targetId="2622-52fa-29f7-96bb" id="aa68-555a-e6a5-b559" primary="true" name="3. Standard Battle Groups"/>
+        <categoryLink targetId="2622-52fa-29f7-96bb" id="0a5a-7aef-e60f-8f93" primary="true" name="3. Standard Battle Groups"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Recon Team" hidden="false" id="53b2-09b0-a811-fac1">
@@ -309,6 +318,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="c778-81ec-51dd-b8de" primary="true" name="3. Infantry Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Ranger Team" hidden="false" id="7ba1-d44b-5f6f-9d25">
       <rules>
@@ -384,6 +396,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="765e-80d1-ebfb-b0c9" primary="true" name="3. Infantry Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Engineers" hidden="false" id="9ea9-8781-c781-1335">
       <selectionEntries>
@@ -453,11 +468,11 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="870a-81aa-e07c-3d01" id="efaf-eed6-b049-e595" primary="false" name="3. Infantry Units"/>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="efaf-eed6-b049-e595" primary="true" name="3. Infantry Units"/>
       </categoryLinks>
       <comment>I&apos;ve omitted the Trip Mine ability and replaced it with grenades because there&apos;s no rules for trip mines just yet.</comment>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="UNSC Fire Support" hidden="false" id="51c5-1426-4bd9-1679">
+    <selectionEntry type="unit" import="true" name="UNSC Fire Support" hidden="false" id="51c5-1426-4bd9-1679">
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Fire Support Element" hidden="false" id="f13d-f2e4-45db-aa24" defaultAmount="2">
           <entryLinks>
@@ -501,8 +516,8 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
                 </selectionEntry>
               </selectionEntries>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="283a-edc8-655a-072b-min" includeChildSelections="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="283a-edc8-655a-072b-max" includeChildSelections="true"/>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="283a-edc8-655a-072b-max-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="283a-edc8-655a-072b-max-max" includeChildSelections="false"/>
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -514,6 +529,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="0054-35d2-e519-64e0" primary="true" name="3. Infantry Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Frag Grenades - RIfleman" hidden="false" id="0d91-a582-51fa-1d68">
       <infoLinks>
@@ -585,6 +603,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
       </constraints>
       <infoLinks>
         <infoLink name="Flash Grenades - Ranger" id="6f41-233b-1561-8277" hidden="false" type="profile" targetId="93ed-bfed-65ae-aacc"/>
+        <infoLink name="Suppression (+X)" id="71b2-d5eb-bb0e-0293" hidden="false" type="profile" targetId="3c54-534d-e321-e085"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sniper Rifle - Recon" hidden="false" id="2b9c-587f-b4dd-f1d4">
@@ -744,15 +763,15 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <selectionEntry type="model" import="true" name="Condor Element" hidden="false" id="0e15-ec87-72bd-fcb3">
           <infoLinks>
             <infoLink name="Condor Element" id="bd11-9800-1d57-91a9" hidden="false" type="profile" targetId="e9bb-21ec-8be2-203b"/>
-            <infoLink name="Dust Off" id="0e19-4fe8-2adb-8685" hidden="false" type="rule" targetId="a026-0ad6-d4b3-e373"/>
+            <infoLink name="Dust Off" id="e40d-6779-e538-c9d6" hidden="false" type="profile" targetId="5bc3-d948-9f97-8fb3"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Autocannon - Condor" hidden="false" id="71d1-cc0b-cb87-8105" type="selectionEntry" targetId="71d5-2c30-69b0-baff"/>
-            <entryLink import="true" name="ASM Reinforcement Condor" hidden="false" id="ca17-8c59-5bdf-7c89" type="selectionEntry" targetId="dd56-afa3-03e8-5358"/>
-            <entryLink import="true" name="ASM Bunker Drop" hidden="false" id="3949-bc44-29c5-0e92" type="selectionEntry" targetId="c698-940c-516d-669f"/>
-            <entryLink import="true" name="ASM Combat Air Patrol" hidden="false" id="5c68-3828-16ff-1ef9" type="selectionEntry" targetId="03b5-08ad-27b4-cbfb"/>
-            <entryLink import="true" name="ASM Combat Drop" hidden="false" id="1e85-aceb-e3a4-dbf2" type="selectionEntry" targetId="96b1-bf9e-5aca-cc88"/>
-            <entryLink import="true" name="ASM Supply Drop" hidden="false" id="2e3b-3d7d-b4ed-eb79" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
+            <entryLink import="true" name="Reinforcement (Condor)" hidden="false" id="ca17-8c59-5bdf-7c89" type="selectionEntry" targetId="dd56-afa3-03e8-5358"/>
+            <entryLink import="true" name="Bunker Drop" hidden="false" id="3949-bc44-29c5-0e92" type="selectionEntry" targetId="c698-940c-516d-669f"/>
+            <entryLink import="true" name="Combat Air Patrol" hidden="false" id="5c68-3828-16ff-1ef9" type="selectionEntry" targetId="03b5-08ad-27b4-cbfb"/>
+            <entryLink import="true" name="Combat Drop" hidden="false" id="1e85-aceb-e3a4-dbf2" type="selectionEntry" targetId="96b1-bf9e-5aca-cc88"/>
+            <entryLink import="true" name="Supply Drop" hidden="false" id="2e3b-3d7d-b4ed-eb79" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
           </entryLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f9a-da5b-da71-6773-min"/>
@@ -766,6 +785,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="7c35-1431-7aeb-f459" id="adf2-d276-ddda-dbf3" primary="true" name="5. Flyer Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Autocannon - Condor" hidden="false" id="71d5-2c30-69b0-baff">
       <constraints>
@@ -794,6 +816,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="d8f3-42ac-dfad-6a42" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Elephant" hidden="false" id="aa05-32ee-5893-6479">
       <selectionEntries>
@@ -802,7 +827,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <entryLink import="true" name="Chaingun - Elephant" hidden="false" id="9a53-28a7-1545-7f39" type="selectionEntry" targetId="3d94-25e0-4b56-442b"/>
           </entryLinks>
           <infoLinks>
-            <infoLink name="UNSC Elephant" id="31e8-5d84-a9a2-8613" hidden="false" type="profile" targetId="e205-118c-9e0f-3c51"/>
+            <infoLink name="Elephant Element" id="31e8-5d84-a9a2-8613" hidden="false" type="profile" targetId="e205-118c-9e0f-3c51"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="47b1-1480-654e-506b-min"/>
@@ -816,6 +841,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="1"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="0978-9b2c-8711-ea78" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Chaingun - Elephant" hidden="false" id="3d94-25e0-4b56-442b">
       <infoLinks>
@@ -855,7 +883,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Warthog" hidden="false" id="2c2f-f97c-8a0d-09e5">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Warthog Element" hidden="false" id="4969-3e62-a65e-1018">
+        <selectionEntry type="model" import="true" name="Warthog Element" hidden="false" id="4969-3e62-a65e-1018" defaultAmount="1">
           <infoLinks>
             <infoLink name="Warthog Element" id="9f5d-fafd-ff91-a8b7" hidden="false" type="profile" targetId="05cd-a94c-c0f1-88d0"/>
           </infoLinks>
@@ -863,8 +891,8 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <entryLink import="true" name="Chaingun - Warthog" hidden="false" id="9e06-1134-0890-d584" type="selectionEntry" targetId="37ab-a48b-c204-98f6"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2447-73ce-74bc-6ec9"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5860-85a2-3916-440c"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc89-f93c-b18e-49c6"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="bb71-c718-ade0-f08d"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="120"/>
@@ -874,10 +902,13 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="a203-af2c-0cd2-51da" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Rocket Warthog" hidden="false" id="4bf4-3f24-9909-fa42">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Rocket Warthog Element" hidden="false" id="f1c5-d524-6c76-c1e5">
+        <selectionEntry type="model" import="true" name="Rocket Warthog Element" hidden="false" id="f1c5-d524-6c76-c1e5" defaultAmount="1">
           <infoLinks>
             <infoLink name="Gauss/Rocket Warthog Element" id="fae1-2278-9aaf-dafa" hidden="false" type="profile" targetId="0269-7538-87b1-11f3"/>
           </infoLinks>
@@ -885,8 +916,8 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <entryLink import="true" name="Rocket Launcher - Warthog" hidden="false" id="fb69-918a-8b94-8aaf" type="selectionEntry" targetId="89b0-efcd-f2af-4833"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e27-fd88-d881-36fc"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="73ab-9f07-a4b6-454b"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d307-67e8-7db1-615a"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="017b-dc06-60e9-c633"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="125"/>
@@ -896,10 +927,13 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="6f8a-2980-41da-79a1" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Gauss Warthog" hidden="false" id="fac9-3698-f3d5-1ef2">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Gauss Warthog Element" hidden="false" id="712e-be79-5e63-242b">
+        <selectionEntry type="model" import="true" name="Gauss Warthog Element" hidden="false" id="712e-be79-5e63-242b" defaultAmount="1">
           <infoLinks>
             <infoLink name="Gauss/Rocket Warthog Element" id="f57d-f94e-635f-af69" hidden="false" type="profile" targetId="0269-7538-87b1-11f3"/>
           </infoLinks>
@@ -907,8 +941,8 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <entryLink import="true" name="Gauss Cannon - Warthog" hidden="false" id="3a91-bad0-4cee-f2ad" type="selectionEntry" targetId="f9bf-4707-9bf4-4ddc"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b21-12a2-f8b2-c11e"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8c98-3af8-5add-1a04"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad6a-5540-1214-25dd"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d8dd-66ec-298e-7aad"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="125"/>
@@ -918,16 +952,19 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="e061-d3de-ef7b-f784" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Troop Warthog" hidden="false" id="3e26-5973-9647-07bd">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Troop Warthog Element" hidden="false" id="e07a-14a4-5177-af62">
+        <selectionEntry type="model" import="true" name="Troop Warthog Element" hidden="false" id="e07a-14a4-5177-af62" defaultAmount="1">
           <infoLinks>
             <infoLink name="Troop Warthog Element" id="13aa-4d5e-132e-576d" hidden="false" type="profile" targetId="849b-4e3e-7a5a-2f9f"/>
           </infoLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5e94-6c44-663c-6bc6"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f2d9-b6f7-503d-8ca1"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51fe-5c2b-7914-2063"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b7f6-4198-e24b-1bb2"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="100"/>
@@ -937,6 +974,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="03b3-d27f-8240-9fe6" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="UNSC Kodiak" hidden="false" id="4afa-1e4e-bc47-6614">
       <selectionEntries>
@@ -962,6 +1002,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="e548-c8ab-ffd8-6b44" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Howitzer Cannon - Kodiak" hidden="false" id="1366-2933-ed58-eec8">
       <infoLinks>
@@ -994,6 +1037,10 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
       <infoLinks>
         <infoLink name="Guided Missiles - Longsword" id="6257-ebe2-23f8-cb22" hidden="false" type="profile" targetId="81ad-900a-6a39-c1fc"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec76-3808-c041-7662"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a127-dad6-cda6-529e"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Rapid Fire Coilguns - Longsword" hidden="false" id="dd68-43e1-5d39-0883">
       <infoLinks>
@@ -1018,9 +1065,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f97-f93d-d0ff-0330-max"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="ASM Ground Attack" hidden="false" id="a438-1ed2-f496-de75" type="selectionEntry" targetId="9197-9826-6a28-317a"/>
-            <entryLink import="true" name="ASM Supply Drop" hidden="false" id="0231-f581-6d2b-a839" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
-            <entryLink import="true" name="ASM Combat Air Patrol" hidden="false" id="752f-9557-ba12-5db0" type="selectionEntry" targetId="03b5-08ad-27b4-cbfb"/>
+            <entryLink import="true" name="Ground Attack" hidden="false" id="a438-1ed2-f496-de75" type="selectionEntry" targetId="9197-9826-6a28-317a"/>
+            <entryLink import="true" name="Supply Drop" hidden="false" id="0231-f581-6d2b-a839" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
+            <entryLink import="true" name="Combat Air Patrol" hidden="false" id="752f-9557-ba12-5db0" type="selectionEntry" targetId="03b5-08ad-27b4-cbfb"/>
           </entryLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed6f-317f-eb94-41ee-min"/>
@@ -1034,6 +1081,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="7c35-1431-7aeb-f459" id="c59e-c48f-f57d-a3b7" primary="true" name="5. Flyer Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Mantis" hidden="false" id="3013-e692-0bd3-df3f">
       <infoLinks>
@@ -1079,6 +1129,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="8726-ac3b-c39d-12a4" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Mastodon" hidden="false" id="8c5a-0216-69c4-83ee">
       <infoLinks>
@@ -1110,6 +1163,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="cbb9-a489-b902-7af9" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Rocket Launchers - Mongoose" hidden="false" id="86ad-54af-5df2-e8e6">
       <infoLinks>
@@ -1141,6 +1197,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="8947-a273-591a-8d80" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Small Arms - ODST" hidden="false" id="9bb0-c250-e0f9-ebe6">
       <constraints>
@@ -1227,9 +1286,6 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <cost name="C" typeId="Character" value="0"/>
             <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
           </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="455f-9bff-6bd7-5434"/>
-          </constraints>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1238,6 +1294,9 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="38b1-0779-78dc-edac" primary="true" name="3. Infantry Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Frag Grenades - ODST" hidden="false" id="f16e-a5c7-85cb-681e">
       <constraints>
@@ -1259,25 +1318,35 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <entryLink import="true" name="Frag Grenades - ODST" hidden="false" id="fbdd-59a1-2b06-d18f" type="selectionEntry" targetId="f16e-a5c7-85cb-681e"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="3a8f-2dbf-d397-389b-min"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="3a8f-2dbf-d397-389b-max"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="3a8f-2dbf-d397-389b-min-min"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="3a8f-2dbf-d397-389b-min-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="3a8f-2dbf-d397-389b-min">
+            <modifier type="decrement" value="1" field="3a8f-2dbf-d397-389b-min-min">
               <conditions>
                 <condition type="equalTo" value="1" field="selections" scope="parent" childId="8b5e-3952-c314-0b59" shared="true" includeChildSelections="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="3" field="3a8f-2dbf-d397-389b-max">
+            <modifier type="decrement" value="1" field="3a8f-2dbf-d397-389b-min-max">
               <conditions>
                 <condition type="equalTo" value="1" field="selections" scope="parent" childId="8b5e-3952-c314-0b59" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="3a8f-2dbf-d397-389b-min-min">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4858-1dad-698c-3ca0" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="3a8f-2dbf-d397-389b-min-max">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4858-1dad-698c-3ca0" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="ODST Fireteam Officer (Upgrades 1 Element)" hidden="false" id="8b5e-3952-c314-0b59">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="ODST Fireteam Officer Element" hidden="false" id="784f-19db-d5e9-654e">
+            <selectionEntry type="model" import="true" name="ODST Fireteam Officer Element" hidden="false" id="784f-19db-d5e9-654e">
               <infoLinks>
                 <infoLink name="ODST Fireteam Officer Element" id="b5dc-9c30-ae38-cb72" hidden="false" type="profile" targetId="9476-a38d-448a-4c5e"/>
               </infoLinks>
@@ -1297,36 +1366,49 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <cost name="C" typeId="Character" value="0"/>
             <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Death From Above (Gain Orbital Insertion)" hidden="false" id="2169-883d-3142-9787">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-            <cost name="BR" typeId="Build Rating" value="0"/>
-            <cost name="C" typeId="Character" value="0"/>
-            <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Death From Above" id="8bff-a11e-a598-25b9" hidden="false" type="profile" targetId="bdd9-b480-eac1-dca5"/>
-          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebc9-bbcc-57b8-c5fc"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Rocket/Sniper Weapons Team" hidden="false" id="4858-1dad-698c-3ca0">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="ODST Fireteam Element" hidden="false" id="de58-e37e-94f2-bd66" defaultAmount="4">
-              <infoLinks>
-                <infoLink name="ODST Fireteam Element" id="2e36-045d-d38f-433f" hidden="false" type="profile" targetId="d055-2201-0084-b3f4"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ee00-4f7a-e400-5b95"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57ee-61d9-61ff-1bf7"/>
-              </constraints>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Armament" id="ee31-e255-032d-8958" hidden="false">
+            <selectionEntry type="upgrade" import="true" name="Rocket Launcher" hidden="false" id="987e-22e5-7a9c-0d9a">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="ODST Fireteam Element" hidden="false" id="4c8b-9db5-1ea7-1016" defaultAmount="1">
+                  <infoLinks>
+                    <infoLink name="ODST Fireteam Element" id="d680-bc5e-3842-e3b5" hidden="false" type="profile" targetId="d055-2201-0084-b3f4"/>
+                  </infoLinks>
                   <entryLinks>
-                    <entryLink import="true" name="Sniper Rifle - ODST" hidden="false" id="a604-b28a-7734-24f3" type="selectionEntry" targetId="91b1-e159-9f2f-c7c2"/>
-                    <entryLink import="true" name="Rocket Launchers - ODST" hidden="false" id="60cc-861c-68c7-ab2e" type="selectionEntry" targetId="6d81-838f-6471-4057"/>
+                    <entryLink import="true" name="Rocket Launchers - ODST" hidden="false" id="b3db-76bd-366e-5ce8" type="selectionEntry" targetId="6d81-838f-6471-4057"/>
                   </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f6c-471f-03b7-902b-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f6c-471f-03b7-902b-max"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="169d-fe95-b989-1a2e"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="cec2-a1c1-b4dd-e128">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="ODST Fireteam Element" hidden="false" id="25a5-c4a7-013f-dd4b" defaultAmount="1">
+                  <infoLinks>
+                    <infoLink name="ODST Fireteam Element" id="dbcb-49b0-15bd-543e" hidden="false" type="profile" targetId="d055-2201-0084-b3f4"/>
+                  </infoLinks>
+                  <entryLinks>
+                    <entryLink import="true" name="Sniper Rifle - ODST" hidden="false" id="caf3-6faa-af62-e9b9" type="selectionEntry" targetId="91b1-e159-9f2f-c7c2"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c452-45f5-dcdb-9b0f-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c452-45f5-dcdb-9b0f-max"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="f034-8acc-51f1-04e0"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <costs>
@@ -1335,6 +1417,11 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <cost name="C" typeId="Character" value="0"/>
             <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
           </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="483a-8c7e-25dc-71d2"/>
+            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="068c-7eff-4138-af27-min"/>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="068c-7eff-4138-af27-max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1343,21 +1430,882 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <cost name="C" typeId="Character" value="0"/>
         <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Death From Above (Gain Orbital Insertion)" hidden="false" id="3ee5-e47f-7de2-288f" type="selectionEntry" targetId="1e02-3d59-ef11-c15a">
+          <modifiers>
+            <modifier type="set" value="1" field="7034-002c-4840-9966">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7fa6-4640-b4bb-cd8d" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="870a-81aa-e07c-3d01" id="6463-eb61-7fed-47c0" primary="true" name="3. Infantry Units"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sniper Rifle - ODST" hidden="false" id="91b1-e159-9f2f-c7c2">
       <infoLinks>
         <infoLink name="Sniper Rifle - ODST" id="f2ce-0a4f-0c5c-66ab" hidden="false" type="profile" targetId="2d83-a5c5-b2af-7b16"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b69f-633d-34c5-2688"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75dd-47fd-e8dc-27a4"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Rocket Launchers - ODST" hidden="false" id="6d81-838f-6471-4057">
       <infoLinks>
         <infoLink name="Rocket Launchers - ODST" id="cf15-4619-ee97-fee6" hidden="false" type="profile" targetId="bcfa-4ae6-f7b1-427a"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed1e-91c7-4c04-8557"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8796-2d7c-0cb1-ad3c"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Autocannon - Pelican" hidden="false" id="ff3d-02c2-0cd5-b0fd">
+      <infoLinks>
+        <infoLink name="Autocannon - Pelican" id="3912-6105-e031-ce4b" hidden="false" type="profile" targetId="9a1a-2a1e-87bd-3dc1"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f7a-6ab6-c9bb-7f67"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a4fa-0fb3-4c12-bf07"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Missile Launchers - Pelican" hidden="false" id="01f1-02c9-8e9b-b598">
+      <infoLinks>
+        <infoLink name="Missile Launchers - Pelican" id="36ed-060c-b3f9-67b3" hidden="false" type="profile" targetId="c713-227e-7949-de54"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d9e-4a21-668e-cb34"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d869-845e-2eda-7d51"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="UNSC Pelican" hidden="false" id="01f0-4043-8184-3265">
+      <costs>
+        <cost name="pts" typeId="points" value="250"/>
+        <cost name="BR" typeId="Build Rating" value="5"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Pelican Element" id="90ae-0d7c-8a32-e341" hidden="false" type="profile" targetId="de84-922f-daaa-d53b"/>
+        <infoLink name="Dust Off" id="9e8e-43c9-38a0-b621" hidden="false" type="profile" targetId="5bc3-d948-9f97-8fb3"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Autocannon - Pelican" hidden="false" id="b0a3-9dfb-a527-0f19" type="selectionEntry" targetId="ff3d-02c2-0cd5-b0fd"/>
+        <entryLink import="true" name="Missile Launchers - Pelican" hidden="false" id="0769-c4cf-b6f9-7715" type="selectionEntry" targetId="01f1-02c9-8e9b-b598"/>
+        <entryLink import="true" name="Supply Drop" hidden="false" id="8e98-685b-cb2d-d9d4" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
+        <entryLink import="true" name="Ground Attack" hidden="false" id="451a-853c-b6db-4722" type="selectionEntry" targetId="9197-9826-6a28-317a"/>
+        <entryLink import="true" name="Combat Air Patrol" hidden="false" id="14cf-1464-c056-b54c" type="selectionEntry" targetId="03b5-08ad-27b4-cbfb"/>
+        <entryLink import="true" name="Reinforcement" hidden="false" id="ac80-8f0e-152d-fc7f" type="selectionEntry" targetId="1ed2-2834-2e36-4062"/>
+        <entryLink import="true" name="Combat Drop" hidden="false" id="52ad-0b00-840e-9b7a" type="selectionEntry" targetId="96b1-bf9e-5aca-cc88"/>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="7c35-1431-7aeb-f459" id="8091-921e-6f3e-33e5" primary="true" name="5. Flyer Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="High Velocity Cannon - Scorpion" hidden="false" id="ef52-d9e8-8665-dad5">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd82-7978-91e7-0f35"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="77fd-9c0f-e07b-1d4d"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="High Velocity Cannon - Scorpion" id="96e6-4806-0bed-9b3f" hidden="false" type="profile" targetId="e8c7-fd99-a842-0d79"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Canister Shot - Scorpion" hidden="false" id="7924-520c-b912-4f44">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3681-5187-1c1b-c87b"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d69d-29e3-b3c3-0c49"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Canister Shot - Scorpion" id="04f4-f3d3-d30e-3db1" hidden="false" type="profile" targetId="cedf-4385-1ec7-d09a"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Machine Gun - Scorpion" hidden="false" id="a18b-e126-5f02-aba7">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc02-a7f3-fb63-277c"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e321-1bcf-4199-ff30"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Machine Gun - Scorpion" id="60c8-986d-2806-cfa0" hidden="false" type="profile" targetId="f094-8f79-ff32-16b1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Scorpion" hidden="false" id="7290-3a21-b791-a105">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Scorpion Element" hidden="false" id="bd59-be7e-3bc8-230c">
+          <profiles>
+            <profile name="Canister Shot" typeId="65d7-7a94-0584-2c1d" typeName="Unit Loadouts" hidden="false" id="1a16-aacc-64ed-0abc">
+              <characteristics>
+                <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">Once per Game, this Unit may elect to load a Canister Shot instead of firing their High Velocity Cannon. Use the Canister Shot weapon profile when resolving the upcoming attack.</characteristic>
+              </characteristics>
+              <alias>Special (See Ability)</alias>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Scorpion Element" id="a9a8-2ab9-8f91-6ea4" hidden="false" type="profile" targetId="e683-2ea8-418f-2f26"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="High Velocity Cannon - Scorpion" hidden="false" id="4e4a-3239-dee4-3a45" type="selectionEntry" targetId="ef52-d9e8-8665-dad5"/>
+            <entryLink import="true" name="Heavy Machine Gun - Scorpion" hidden="false" id="1b72-a71f-7d8c-15ac" type="selectionEntry" targetId="a18b-e126-5f02-aba7"/>
+            <entryLink import="true" name="Canister Shot - Scorpion" hidden="false" id="88c1-9016-6bea-bb9f" type="selectionEntry" targetId="7924-520c-b912-4f44"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2868-2b98-d3b9-4c82-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2868-2b98-d3b9-4c82-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="250"/>
+        <cost name="BR" typeId="Build Rating" value="4"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="686a-b23b-91bb-5a91" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Napalm Bombs - Shortsword" hidden="false" id="87ed-bab0-0cf1-28bf">
+      <infoLinks>
+        <infoLink name="Napalm Bombs - Shortsword" id="0270-ce06-6c72-a034" hidden="false" type="profile" targetId="5dc6-9c4b-94bd-cfa8"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b10-ce05-d7e1-2ff3"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae10-0803-1b8d-f182"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Autocannons - Shortsword" hidden="false" id="2ce6-ffa6-05c9-0c4b">
+      <infoLinks>
+        <infoLink name="Autocannons - Shortsword" id="1114-4b45-a732-de19" hidden="false" type="profile" targetId="5a18-7714-fc26-2fa0"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="14a9-bf2b-65fb-fb73"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1eb0-b583-53d8-da00"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Shortsword" hidden="false" id="ba21-c304-596d-c7ad">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="UNSC Shortsword" hidden="false" id="48ba-5c25-2e70-6846">
+          <entryLinks>
+            <entryLink import="true" name="Autocannons - Shortsword" hidden="false" id="1e96-f900-9648-34b7" type="selectionEntry" targetId="2ce6-ffa6-05c9-0c4b"/>
+            <entryLink import="true" name="Napalm Bombs - Shortsword" hidden="false" id="2926-c893-988c-5dd5" type="selectionEntry" targetId="87ed-bab0-0cf1-28bf"/>
+            <entryLink import="true" name="Ground Attack (Non Dropship)" hidden="false" id="4071-2be7-992c-b30d" type="selectionEntry" targetId="8e81-1c24-e7e5-24c0"/>
+            <entryLink import="true" name="Combat Air Patrol (Non Dropship)" hidden="false" id="1a1b-0bef-a60d-1d9a" type="selectionEntry" targetId="7ec0-4738-3bdd-c4ca"/>
+            <entryLink import="true" name="Supply Drop" hidden="false" id="a4a7-a73a-587c-163d" type="selectionEntry" targetId="d804-bdbb-d57a-7754"/>
+            <entryLink import="true" name="Carpet Bombing" hidden="false" id="6b33-fb18-19bc-3486" type="selectionEntry" targetId="a103-4b1c-1cf1-2852"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Shortsword Element" id="bc4a-4b1d-bf30-24f1" hidden="false" type="profile" targetId="575e-0b4a-8f4c-9c7e"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+        <cost name="BR" typeId="Build Rating" value="3"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="7c35-1431-7aeb-f459" id="27d8-6f7a-36dd-db03" primary="true" name="5. Flyer Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Auto-Cannons - Sun Devil" hidden="false" id="7d4d-eb91-3a40-6c1b">
+      <infoLinks>
+        <infoLink name="Auto-Cannons - Sun Devil" id="fe8b-dfb6-cd5b-65d8" hidden="false" type="profile" targetId="f728-4fbf-5dea-50dd"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6137-ac1a-3503-753d"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b444-61c4-dbed-1f92"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Sun Devil" hidden="false" id="e9af-97fa-1386-cb9e">
+      <costs>
+        <cost name="pts" typeId="points" value="250"/>
+        <cost name="BR" typeId="Build Rating" value="4"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Sun Devil Element" hidden="false" id="339c-5a4f-c16d-6965">
+          <infoLinks>
+            <infoLink name="Sun Devil Element" id="05e0-6182-d009-3661" hidden="false" type="profile" targetId="6e0e-1115-b1b8-f39b"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Auto-Cannons - Sun Devil" hidden="false" id="7f2d-a770-82e2-2280" type="selectionEntry" targetId="7d4d-eb91-3a40-6c1b"/>
+            <entryLink import="true" name="Heavy Machine Gun - Scorpion" hidden="false" id="8802-f9f1-d1f4-2834" type="selectionEntry" targetId="a18b-e126-5f02-aba7"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f76e-4e04-6a1b-df51-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f76e-4e04-6a1b-df51-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="8836-c333-02aa-c0bc" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Troop Transport Falcon" hidden="false" id="4f24-e6a3-1f9b-7a42">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+        <cost name="BR" typeId="Build Rating" value="2"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Troop Transport Falcon Element" hidden="false" id="2973-d188-e5e4-586f">
+          <entryLinks>
+            <entryLink import="true" name="Autocannon - Assault Falcon" hidden="false" id="65b0-ffbd-e879-15df" type="selectionEntry" targetId="88b3-b2d9-1a1c-36ac"/>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Troop Transport Falcon Element" id="d701-408f-fb73-0afa" hidden="false" type="profile" targetId="4303-736c-e9dd-0fb3"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="7c35-1431-7aeb-f459" id="9058-fe54-0527-9785" primary="true" name="5. Flyer Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Missile Pods - Wolverine" hidden="false" id="c258-f288-818a-a8fc">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="21f5-d9fa-3166-95bf"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="086b-2af1-2f3c-40cf"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Missile Pods - Wolverine" id="c2e2-cd44-d0a6-c742" hidden="false" type="profile" targetId="d525-630a-d5fb-3a9b"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grenade Launcher - Wolverine" hidden="false" id="456e-a49e-54dd-a00f">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f92-b6b9-6ac1-589b"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c56f-34d9-479f-6d38"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Grenade Launcher - Wolverine" id="6154-ad2c-c570-b82f" hidden="false" type="profile" targetId="dbdd-9134-c411-7b6a"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="UNSC Wolverine" hidden="false" id="00a3-b7c1-4e5a-5f1e">
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+        <cost name="BR" typeId="Build Rating" value="3"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Wolverine Element" hidden="false" id="488e-7e7c-154e-5f04">
+          <infoLinks>
+            <infoLink name="Wolverine Element" id="3266-94a0-1d0d-5dcc" hidden="false" type="profile" targetId="342d-cb42-fa51-5bfe"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Grenade Launcher - Wolverine" hidden="false" id="f812-6bdf-99b7-a411" type="selectionEntry" targetId="456e-a49e-54dd-a00f"/>
+            <entryLink import="true" name="Missile Pods - Wolverine" hidden="false" id="7f9e-439d-bf85-11d6" type="selectionEntry" targetId="c258-f288-818a-a8fc"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="0744-a0c8-3431-ff6e" id="65da-f180-f432-9fef" primary="true" name="4. Armoured Units"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Force Commander (Heroic) - Colonel Holland" hidden="false" id="fef0-de34-e70b-1188">
+      <categoryLinks>
+        <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="38d7-412d-35f9-7630" primary="true" name="2. Force Commander (BG)"/>
+        <categoryLink targetId="cefc-8143-dc20-9bf8" id="d58e-4aad-514c-ab07" primary="false" name="2. Force Commander (OS)"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Colonel Holland" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="f46e-56c3-99f6-35e6">
+          <characteristics>
+            <characteristic name="Command Dice Slots" typeId="d60f-6f92-942f-6db0">4</characteristic>
+            <characteristic name="Shared Command Dice Slots" typeId="0a6a-7d43-a7de-3666">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Last Stand" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="069e-4c21-5e32-8e43">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">When a unit in this Commander&apos;s army starts an activation while they have less VP than the enemy, that unit may add 1 extra dice to their attack dice pools.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Standard Orders" id="c01d-62dd-5e04-3466" hidden="false">
+          <infoLinks>
+            <infoLink name="Mark Your Targets!" id="65a7-8423-8d5d-8c33" hidden="false" type="profile" targetId="4804-1d80-5a34-a920"/>
+            <infoLink name="Area Telemetry" id="40c0-5cff-cb05-35aa" hidden="false" type="profile" targetId="eaf1-89ff-99ac-76c8"/>
+            <infoLink name="Form Up!" id="b02c-71ae-3241-0228" hidden="false" type="profile" targetId="c341-b769-448a-6d4f"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Orders" id="b31a-37ac-6d33-f738" hidden="false">
+          <profiles>
+            <profile name="To The Last!" typeId="8780-e06f-d1e7-76a7" typeName="Unique Orders" hidden="false" id="5895-3e73-1912-8b27">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">2 Command</characteristic>
+                <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Once per game turn, this order may be issued. A unit gains +1 to its Heroic Save, or gains Heroic Save (6+) if it does not have one.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Force Commander - Combat AI" hidden="false" id="8edc-ea0e-83da-0103">
+      <categoryLinks>
+        <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="c355-4f8b-278a-9d97" primary="true" name="2. Force Commander (BG)"/>
+        <categoryLink targetId="cefc-8143-dc20-9bf8" id="4824-e46a-ad59-70e8" primary="false" name="2. Force Commander (OS)"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Combat AI" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="a486-8547-e33f-103a">
+          <characteristics>
+            <characteristic name="Command Dice Slots" typeId="d60f-6f92-942f-6db0">3</characteristic>
+            <characteristic name="Shared Command Dice Slots" typeId="0a6a-7d43-a7de-3666">0</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Standard Orders" id="a3c3-40a4-d737-758f" hidden="false">
+          <infoLinks>
+            <infoLink name="Mark Your Targets!" id="f9b9-7ee2-274f-4b13" hidden="false" type="profile" targetId="4804-1d80-5a34-a920"/>
+            <infoLink name="Area Telemetry" id="7652-4ba3-cb52-d051" hidden="false" type="profile" targetId="eaf1-89ff-99ac-76c8"/>
+            <infoLink name="Battlenet Hack" id="b133-558d-c367-a3ba" hidden="false" type="profile" targetId="5d6a-d618-31fb-ca2f"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Orders" id="974b-1e2c-4371-07f9" hidden="false">
+          <profiles>
+            <profile name="Sensor Targeting" typeId="8780-e06f-d1e7-76a7" typeName="Unique Orders" hidden="false" id="eeb4-be42-de7a-003f">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">1 Defense, 1 Command</characteristic>
+                <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Once Per Game Turn, this order may be issued before a friendly unit makes their attacks. One unit being attacked by that friendly unit must take a Suppression Test, even if normally would not.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="50"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Force Commander - First Sergeant" hidden="false" id="d40c-b31a-54aa-6916">
+      <categoryLinks>
+        <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="de21-0129-f0cc-8177" primary="true" name="2. Force Commander (BG)"/>
+        <categoryLink targetId="cefc-8143-dc20-9bf8" id="7d35-918f-7f18-7af7" primary="false" name="2. Force Commander (OS)"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="First Sergeant" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="c0cc-6cd0-dd7e-7f4b">
+          <characteristics>
+            <characteristic name="Command Dice Slots" typeId="d60f-6f92-942f-6db0">4</characteristic>
+            <characteristic name="Shared Command Dice Slots" typeId="0a6a-7d43-a7de-3666">0</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Concealment" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="643d-242a-6442-1dbc">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">Any friendly Unit that has not performed movement this turn counts as being in Light Cover. This does not stack with any other sources of cover or bonuses.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Standard Orders" id="5b02-ae50-3393-e1d0" hidden="false">
+          <infoLinks>
+            <infoLink name="Area Telemetry" id="a58e-7db9-5229-f029" hidden="false" type="profile" targetId="eaf1-89ff-99ac-76c8"/>
+            <infoLink name="On The Double!" id="d2f9-1034-19d5-fb32" hidden="false" type="profile" targetId="042f-7f5a-563d-c810"/>
+            <infoLink name="Get Down!" id="f3f9-22d0-33f0-e3da" hidden="false" type="profile" targetId="49c0-dcf2-9706-51a8"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Orders" id="49a3-53cb-f20f-7b29" hidden="false">
+          <profiles>
+            <profile name="Advanced Camo" typeId="8780-e06f-d1e7-76a7" typeName="Unique Orders" hidden="false" id="da8c-a6b0-2dbe-cef5">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">2 Command</characteristic>
+                <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Cannot be issued to a unit that has performed Movement during its Activation.
+
+
+Issue this order to a Unit, causing them to forgo their Movement but gain the Stealth Field Loadout.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Stealth Field" id="6410-61b3-7a8f-6e9d" hidden="false" type="profile" targetId="692b-c90e-9f22-f38d"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Force Commander - Gunnery Sergeant" hidden="false" id="2fad-b425-e06d-f941">
+      <categoryLinks>
+        <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="15f6-812b-d3e5-ca2d" primary="true" name="2. Force Commander (BG)"/>
+        <categoryLink targetId="cefc-8143-dc20-9bf8" id="7669-8a5c-ccb0-f20b" primary="false" name="2. Force Commander (OS)"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Gunnery Sergeant" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="3ebb-e8db-336a-11f1">
+          <characteristics>
+            <characteristic name="Command Dice Slots" typeId="d60f-6f92-942f-6db0">3</characteristic>
+            <characteristic name="Shared Command Dice Slots" typeId="0a6a-7d43-a7de-3666">0</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Standard Orders" id="bdec-aaa4-b075-0f3f" hidden="false">
+          <infoLinks>
+            <infoLink name="Mark Your Targets!" id="3dc2-0c6a-4d6e-0ac7" hidden="false" type="profile" targetId="4804-1d80-5a34-a920"/>
+            <infoLink name="Take Cover!" id="d057-6669-1deb-b839" hidden="false" type="profile" targetId="d2cf-9e2c-e212-18e8"/>
+            <infoLink name="Form Up!" id="3f53-0a52-8d3f-e219" hidden="false" type="profile" targetId="c341-b769-448a-6d4f"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Orders" id="4744-0fb0-1445-0593" hidden="false">
+          <profiles>
+            <profile name="Boots On The Ground" typeId="8780-e06f-d1e7-76a7" typeName="Unique Orders" hidden="false" id="99e4-4833-0d27-78c9">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">1 Attack, 1 Command</characteristic>
+                <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Must be issued before an Activating Friendly Unit performs any movement.
+
+
+Issue this order to a unit. For its Activation, that unit gains 2&quot;/2&quot; movement, and ignores Hindering Terrain.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="50"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Force Commander - Lieutenant Colonel" hidden="false" id="5e7e-bca8-fd6d-ccc0">
+      <categoryLinks>
+        <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="a225-4608-0257-863d" primary="true" name="2. Force Commander (BG)"/>
+        <categoryLink targetId="cefc-8143-dc20-9bf8" id="b23e-fa8e-c790-2fd9" primary="false" name="2. Force Commander (OS)"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Lieutenant Colonel" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="2cfc-b545-8ace-e556">
+          <characteristics>
+            <characteristic name="Command Dice Slots" typeId="d60f-6f92-942f-6db0">4</characteristic>
+            <characteristic name="Shared Command Dice Slots" typeId="0a6a-7d43-a7de-3666">0</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Air Support" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="4e4a-a1a5-89a7-2ad2">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">Up to 2 Units of Assault or Troop Transport Falcons may be taken in reserves. From Turn 2 onwards, you may deploy these units onto the battlefield, from the board edge of your own deployment zone.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Standard Orders" id="86ae-afa3-4867-8b0b" hidden="false">
+          <infoLinks>
+            <infoLink name="Take Cover!" id="8a0d-4ce2-38ca-6f1a" hidden="false" type="profile" targetId="d2cf-9e2c-e212-18e8"/>
+            <infoLink name="Get Down!" id="cfb3-0ecd-9467-66a8" hidden="false" type="profile" targetId="49c0-dcf2-9706-51a8"/>
+            <infoLink name="Take Aim!" id="46a7-2890-56e8-6c7a" hidden="false" type="profile" targetId="1b9f-06d9-30d0-b40a"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Orders" id="6391-c444-2531-bc91" hidden="false">
+          <profiles>
+            <profile name="You Have To Take It!" typeId="8780-e06f-d1e7-76a7" typeName="Unique Orders" hidden="false" id="7a8b-3ca6-556b-8eac">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">2 Defense</characteristic>
+                <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Must be issued prior to an Enemy unit&apos;s attack being resolved.
+
+
+Issue this order to a unit. That unit halves the amount of damage tokens taken from a unit&apos;s attacks.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Force Commander - Warrant Officer" hidden="false" id="1010-d7a1-cd20-0c10">
+      <categoryLinks>
+        <categoryLink targetId="1d19-aba0-3ac5-ad1e" id="28d6-3c59-60c8-e819" primary="true" name="2. Force Commander (BG)"/>
+        <categoryLink targetId="cefc-8143-dc20-9bf8" id="bd8b-f812-b02b-49f3" primary="false" name="2. Force Commander (OS)"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Warrant Officer" typeId="fdfb-3d66-b4ec-aa76" typeName="Force Commander" hidden="false" id="ef5f-68b8-3089-9259">
+          <characteristics>
+            <characteristic name="Command Dice Slots" typeId="d60f-6f92-942f-6db0">4</characteristic>
+            <characteristic name="Shared Command Dice Slots" typeId="0a6a-7d43-a7de-3666">0</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Standard Orders" id="09a9-03ba-917d-6851" hidden="false">
+          <infoLinks>
+            <infoLink name="Area Telemetry" id="5df2-ddb0-2231-0300" hidden="false" type="profile" targetId="eaf1-89ff-99ac-76c8"/>
+            <infoLink name="Mark Your Targets!" id="75d6-516a-b882-f33f" hidden="false" type="profile" targetId="4804-1d80-5a34-a920"/>
+            <infoLink name="Sabotage" id="baba-1830-29dd-79c0" hidden="false" type="profile" targetId="9e18-80f5-5b08-d34a"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Orders" id="8978-6884-ac9f-a73d" hidden="false">
+          <profiles>
+            <profile name="Engineering Specialist" typeId="8780-e06f-d1e7-76a7" typeName="Unique Orders" hidden="false" id="887d-a525-ac79-3e05">
+              <characteristics>
+                <characteristic name="Command Dice Cost" typeId="39f5-89ef-3dd9-1e24">1 Command, 1 Defense</characteristic>
+                <characteristic name="Order Description" typeId="fc59-fa5f-b1d1-3f6c">Must be issued prior to a Maintenance check being made.
+
+
+Issue this order to a unit. That unit may re-roll failed Maintenance checks. The second result must be accepted.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Grenades!" id="d3ce-be7a-6928-ca28" hidden="false" type="profile" targetId="6084-d696-239c-f8b0"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+        <cost name="BR" typeId="Build Rating" value="0"/>
+        <cost name="C" typeId="Character" value="0"/>
+        <cost name="Heroic Unit Slot" typeId="030f-722a-166e-6138" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Battle Group - UNSC Standard Armoured" hidden="false" id="a1d1-6a12-69c3-11a7">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Requisite Units" id="e480-921b-87fd-1a00" hidden="false" flatten="false" collapsible="true">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Scorpion or Sun Devil" id="ab76-91e8-9934-7b48" hidden="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="0fb0-8e43-ae75-1b2a-min"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="0fb0-8e43-ae75-1b2a-max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="UNSC Sun Devil" hidden="false" id="8f21-2351-97be-92e4" type="selectionEntry" targetId="e9af-97fa-1386-cb9e" defaultAmount="0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="878f-b364-cbaa-c7a8"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="UNSC Scorpion" hidden="false" id="945d-835b-ad30-653d" type="selectionEntry" targetId="7290-3a21-b791-a105" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c74-f8a1-8958-8378"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Warthog (Any Variant, must be taken as at least 2x Element Unit)" id="d9bb-cb75-e1ac-2ecc" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="UNSC Warthog" hidden="false" id="2cb0-562b-a938-2b8e" type="selectionEntry" targetId="2c2f-f97c-8a0d-09e5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e31a-6cc5-1fb5-4fc3"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="UNSC Gauss Warthog" hidden="false" id="9951-dffe-4121-c066" type="selectionEntry" targetId="fac9-3698-f3d5-1ef2" defaultAmount="0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7347-6299-ad9e-38d9"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="UNSC Rocket Warthog" hidden="false" id="36c3-a68f-ef13-a78f" type="selectionEntry" targetId="4bf4-3f24-9909-fa42" defaultAmount="0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a3d-145b-e1f7-4bbc"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="UNSC Troop Warthog" hidden="false" id="e5a4-e245-04e8-7443" type="selectionEntry" targetId="3e26-5973-9647-07bd" defaultAmount="0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b13-9b15-4ede-6f65"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="d7a2-07a1-e644-a94f-min"/>
+                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="d7a2-07a1-e644-a94f-max"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="598d-3cb1-8e84-f82d">
+          <constraints>
+            <constraint type="max" value="0" field="030f-722a-166e-6138" scope="parent" shared="true" id="18e1-fcf0-9b1b-7376" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af54-870f-6852-0a74-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af54-870f-6852-0a74-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Optional Armoured" hidden="false" id="4a08-a3e3-2316-10bf" type="selectionEntryGroup" targetId="e3f5-3826-0250-f6b3">
+              <constraints>
+                <constraint type="max" value="10" field="Build Rating" scope="self" shared="true" id="cba2-703e-13c0-d01c" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Flyers" hidden="false" id="a59c-d624-e95e-7e89" type="selectionEntryGroup" targetId="c9bb-efb0-5342-62ef">
+              <constraints>
+                <constraint type="max" value="6" field="Build Rating" scope="self" shared="true" id="4d4e-f33e-3b55-8f59" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Infantry" hidden="false" id="bb23-c29a-1794-7f2f" type="selectionEntryGroup" targetId="28d3-b0b4-398a-9349">
+              <constraints>
+                <constraint type="max" value="4" field="Build Rating" scope="self" shared="true" id="a73f-c50e-0bbd-d7ac" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="2622-52fa-29f7-96bb" id="c33a-58b6-3cbd-fcce" primary="true" name="3. Standard Battle Groups"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Group Commander" id="3ecf-9a50-5e53-2085" hidden="false" type="profile" targetId="47f5-25ac-a7ad-7eff"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Battle Group (Specialist) - UNSC Armoured Cavalry" hidden="false" id="5fd8-1277-cbac-5285">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Requisite Units" id="6bb4-7900-4f20-8153" hidden="false" flatten="false" collapsible="true">
+          <entryLinks>
+            <entryLink import="true" name="UNSC Warthog" hidden="false" id="6320-43fe-fad2-47f2" type="selectionEntry" targetId="2c2f-f97c-8a0d-09e5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7155-764c-2dcb-b4c0-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7155-764c-2dcb-b4c0-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="UNSC Rocket Warthog" hidden="false" id="7f45-bc43-82a0-61e8" type="selectionEntry" targetId="4bf4-3f24-9909-fa42">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="76e9-1c6e-ce9e-11e9-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76e9-1c6e-ce9e-11e9-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="UNSC Gauss Warthog" hidden="false" id="89c2-a39a-1d15-1352" type="selectionEntry" targetId="fac9-3698-f3d5-1ef2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acc2-ed84-f6d2-5d45-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acc2-ed84-f6d2-5d45-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="4290-b7a6-5ddc-bcb0">
+          <constraints>
+            <constraint type="max" value="0" field="030f-722a-166e-6138" scope="parent" shared="true" id="c606-08d7-44ce-7753" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4911-508d-a2fe-124d-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4911-508d-a2fe-124d-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Optional Flyers" hidden="false" id="993c-6d26-2737-748a" type="selectionEntryGroup" targetId="c9bb-efb0-5342-62ef">
+              <constraints>
+                <constraint type="max" value="5" field="Build Rating" scope="self" shared="true" id="9421-7c5b-8aab-e89e" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="7172-8a4b-611a-9f2c" id="1eec-5033-1a29-b7ab" primary="true" name="4. Specialist Battle Groups"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Warthog Run" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="5822-3d92-ca5a-9e5a">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">All Warthog units in this Battle Group may re-roll failed Ram Attack Dice. Second Result must be accepted.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Battle Group (Specialist) - UNSC Heavy Support" hidden="false" id="7e17-aaa9-3af8-2332">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Requisite Units" id="c340-9529-263b-5e39" hidden="false" flatten="false" collapsible="true">
+          <entryLinks>
+            <entryLink import="true" name="UNSC Fire Support" hidden="false" id="023f-bf66-b8fa-7f35" type="selectionEntry" targetId="51c5-1426-4bd9-1679" defaultAmount="2">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="474d-27ca-a8ca-6bfb-min"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="474d-27ca-a8ca-6bfb-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="07c8-cc33-d646-5867">
+          <constraints>
+            <constraint type="max" value="0" field="030f-722a-166e-6138" scope="parent" shared="true" id="8350-7493-eb39-1f00" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f541-10c5-b4ce-bfb5-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f541-10c5-b4ce-bfb5-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Optional Flyers" hidden="false" id="4009-426c-c26e-13bc" type="selectionEntryGroup" targetId="c9bb-efb0-5342-62ef">
+              <constraints>
+                <constraint type="max" value="3" field="Build Rating" scope="self" shared="true" id="8330-9993-4f67-4b5d" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Armoured" hidden="false" id="b6b8-516f-e15d-3eb8" type="selectionEntryGroup" targetId="e3f5-3826-0250-f6b3">
+              <constraints>
+                <constraint type="max" value="4" field="Build Rating" scope="self" shared="true" id="0537-6b92-e98d-5b1d" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Infantry" hidden="false" id="d849-1541-767d-9d52" type="selectionEntryGroup" targetId="28d3-b0b4-398a-9349">
+              <constraints>
+                <constraint type="max" value="4" field="Build Rating" scope="self" shared="true" id="77d7-3703-e53a-4cee" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="7172-8a4b-611a-9f2c" id="07e1-7932-7d84-55cb" primary="true" name="4. Specialist Battle Groups"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Defensive Positions" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="e3be-df06-8edf-73b1">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">All Fire Support units gain the Elusive loadout for free.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Battle Group (Specialist) - UNSC Force Recon" hidden="false" id="5161-bc51-93dd-f552">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Requisite Units" id="daa2-e3bc-80dc-ac2f" hidden="false" flatten="false" collapsible="true">
+          <entryLinks>
+            <entryLink import="true" name="UNSC Recon Team" hidden="false" id="f5ef-ddcb-5bd9-f37e" type="selectionEntry" targetId="53b2-09b0-a811-fac1" defaultAmount="2">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e385-8b64-1cbc-4e1e-min"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e385-8b64-1cbc-4e1e-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="bc3f-5fa7-b4de-f65b">
+          <constraints>
+            <constraint type="max" value="0" field="030f-722a-166e-6138" scope="parent" shared="true" id="c5ae-8aa5-f62c-c800" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f31-735d-ecd8-32c2-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f31-735d-ecd8-32c2-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Optional Flyers" hidden="false" id="78df-b26f-a17c-9d87" type="selectionEntryGroup" targetId="c9bb-efb0-5342-62ef">
+              <constraints>
+                <constraint type="max" value="3" field="Build Rating" scope="self" shared="true" id="6fb5-ed5d-d589-8e10" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Armoured" hidden="false" id="624d-4cd8-6c44-3fd0" type="selectionEntryGroup" targetId="e3f5-3826-0250-f6b3">
+              <constraints>
+                <constraint type="max" value="4" field="Build Rating" scope="self" shared="true" id="4b19-ac07-b001-5f5b" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Infantry" hidden="false" id="6de7-8920-b427-8bac" type="selectionEntryGroup" targetId="28d3-b0b4-398a-9349">
+              <constraints>
+                <constraint type="max" value="4" field="Build Rating" scope="self" shared="true" id="8419-4a09-a1dd-a259" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="7172-8a4b-611a-9f2c" id="0744-d695-7ce0-b70e" primary="true" name="4. Specialist Battle Groups"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Silent Approach" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="d93e-0864-f3e6-eafd">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">All infantry units in this battlegroup may be deployed onto the battlefield after all other units have been deployed. If multiple players have this rule, each rolls a d6, highest going first.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Battle Group (Specialist) - UNSC ODST Assault Cadre" hidden="false" id="7fa6-4640-b4bb-cd8d">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Requisite Units" id="31b2-2fd7-f764-8f0a" hidden="false" flatten="false" collapsible="true">
+          <entryLinks>
+            <entryLink import="true" name="UNSC ODST Air Assault " hidden="false" id="1d57-feb5-e400-cf8b" type="selectionEntry" targetId="3420-7b65-598b-83e4">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d4d0-b572-2400-36fa"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4e1c-5239-4880-fb1e"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="4e1c-5239-4880-fb1e">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d514-21d9-6799-33da" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="UNSC ODST Fireteam" hidden="false" id="d514-21d9-6799-33da" type="selectionEntry" targetId="f071-2a1b-7142-087a">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7b02-4ecb-fc89-461b"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="777a-c5d4-902c-bdc2"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="777a-c5d4-902c-bdc2">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d57-feb5-e400-cf8b" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="self" shared="true" id="0aa0-a6d3-ed94-db0e-min"/>
+            <constraint type="max" value="2" field="selections" scope="self" shared="true" id="0aa0-a6d3-ed94-db0e-max"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="f2a8-2e00-0a57-5d97">
+          <constraints>
+            <constraint type="max" value="0" field="030f-722a-166e-6138" scope="parent" shared="true" id="0719-a6be-1893-388e" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b04c-de80-124e-8150-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b04c-de80-124e-8150-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Optional Flyers" hidden="false" id="f5ad-59a7-603d-11f3" type="selectionEntryGroup" targetId="c9bb-efb0-5342-62ef">
+              <constraints>
+                <constraint type="max" value="3" field="Build Rating" scope="self" shared="true" id="749d-f06c-8789-4725" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Armoured" hidden="false" id="4a61-5c26-b352-e06e" type="selectionEntryGroup" targetId="e3f5-3826-0250-f6b3">
+              <constraints>
+                <constraint type="max" value="4" field="Build Rating" scope="self" shared="true" id="10f6-0fa7-cecf-432d" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Optional Infantry" hidden="false" id="ec79-bc79-092f-d09d" type="selectionEntryGroup" targetId="28d3-b0b4-398a-9349">
+              <constraints>
+                <constraint type="max" value="4" field="Build Rating" scope="self" shared="true" id="8f1b-ba76-8146-900e" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="7172-8a4b-611a-9f2c" id="6696-b5e1-ce35-3b0a" primary="true" name="4. Specialist Battle Groups"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Versatile Deployment" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="ab1f-2b6b-8163-8160">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">This battlegroup may take two ODST Air Assault or two ODST Fireteam units as requisites.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="UNSC Orbital Insertion Protocols" typeId="65d7-7a94-0584-2c1d" typeName="Unit Ability" hidden="false" id="11a4-5a6d-95ac-d507">
+          <characteristics>
+            <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">ODST Fireteam units in this Battlegroup must take the Orbital Insertion loadout. Additionally, Heroic Infantry may gain the Orbital Insertion loadout for +30pts</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
-    <entryLink import="true" name="UNSC Mechanised Infantry Battle Group" hidden="false" id="ca40-6f58-eb18-e56a" targetId="3d37-ec82-9cc6-34e6" type="selectionEntry"/>
-    <entryLink import="true" name="Commander - Captain" hidden="false" id="086a-583e-5a60-f684" targetId="0fe7-4471-761a-8262" type="selectionEntry"/>
+    <entryLink import="true" name="Battle Group - UNSC Mechanised Infantry" hidden="false" id="ca40-6f58-eb18-e56a" targetId="3d37-ec82-9cc6-34e6" type="selectionEntry"/>
+    <entryLink import="true" name="Force Commander - Captain" hidden="false" id="086a-583e-5a60-f684" targetId="0fe7-4471-761a-8262" type="selectionEntry"/>
+    <entryLink import="true" name="Force Commander - Combat AI" hidden="false" id="485e-395c-b627-3530" targetId="8edc-ea0e-83da-0103" type="selectionEntry"/>
+    <entryLink import="true" name="Force Commander - Lieutenant Colonel" hidden="false" id="feb8-cc69-75f4-a60f" targetId="5e7e-bca8-fd6d-ccc0" type="selectionEntry"/>
+    <entryLink import="true" name="Force Commander - First Sergeant" hidden="false" id="cace-90ab-09d4-11eb" targetId="d40c-b31a-54aa-6916" type="selectionEntry"/>
+    <entryLink import="true" name="Force Commander - Gunnery Sergeant" hidden="false" id="4cff-cc48-8446-4b6c" targetId="2fad-b425-e06d-f941" type="selectionEntry"/>
+    <entryLink import="true" name="Force Commander - Warrant Officer" hidden="false" id="d871-3599-f4d3-444e" targetId="1010-d7a1-cd20-0c10" type="selectionEntry"/>
+    <entryLink import="true" name="Force Commander (Heroic) - Colonel Holland" hidden="false" id="97c8-b5fa-ac34-be23" targetId="fef0-de34-e70b-1188" type="selectionEntry"/>
+    <entryLink import="true" name="Battle Group - UNSC Standard Armoured" hidden="false" id="ed84-13da-5c62-2104" targetId="a1d1-6a12-69c3-11a7" type="selectionEntry"/>
+    <entryLink import="true" name="Battle Group (Specialist) - UNSC Armoured Cavalry" hidden="false" id="d992-e28b-04e4-81d1" targetId="5fd8-1277-cbac-5285" type="selectionEntry"/>
+    <entryLink import="true" name="Battle Group (Specialist) - UNSC Force Recon" hidden="false" id="2e25-8207-76ff-e204" targetId="5161-bc51-93dd-f552" type="selectionEntry"/>
+    <entryLink import="true" name="Battle Group (Specialist) - UNSC Heavy Support" hidden="false" id="6f16-9a90-dd5f-264c" targetId="7e17-aaa9-3af8-2332" type="selectionEntry"/>
+    <entryLink import="true" name="Battle Group (Specialist) - UNSC ODST Assault Cadre" hidden="false" id="c1f6-4fa8-5571-aa19" targetId="7fa6-4640-b4bb-cd8d" type="selectionEntry"/>
   </entryLinks>
   <sharedProfiles>
     <profile name="Small Arms - Rifleman" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="385f-d7ce-7d76-8451">
@@ -1528,7 +2476,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
     <profile name="Sniper Rifle - Recon" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="1a21-9f5e-315e-07b5">
       <characteristics>
         <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/30&quot;</characteristic>
-        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Cooldown, Lock On, Pinpoint (INF)</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Cooldown, Lock On, Pinpoint (INF), Lethal (1)</characteristic>
         <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
         <characteristic name="AP" typeId="b639-e494-578f-979d">5</characteristic>
         <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
@@ -1543,7 +2491,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <characteristic name="React" typeId="8199-6003-2847-9797">7/8</characteristic>
         <characteristic name="Melee" typeId="7e67-d86f-5377-b64e">2</characteristic>
         <characteristic name="Damage" typeId="7543-31e5-03f6-f160">4</characteristic>
-        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Advanced Deployment, Battled Hardened (1), Target Designator</characteristic>
+        <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Advanced Deployment, Battle Hardened (1), Target Designator</characteristic>
       </characteristics>
     </profile>
     <profile name="Small Arms - Ranger" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="5664-4073-43b0-b4fe">
@@ -1580,7 +2528,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
     <profile name="Small Arms - Engineer" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="2d61-547b-9058-49cf">
       <characteristics>
         <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">8&quot;/15&quot;</characteristic>
-        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Point Blank (+1)</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Point Blank</characteristic>
         <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
         <characteristic name="AP" typeId="b639-e494-578f-979d">2</characteristic>
         <characteristic name="AT" typeId="9217-7144-1e94-683d">2</characteristic>
@@ -1691,7 +2639,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Aerial Insertion (1), Stride, Battle Hardened (2), Structural Damage, Maintenance</characteristic>
       </characteristics>
     </profile>
-    <profile name="UNSC Elephant" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="e205-118c-9e0f-3c51">
+    <profile name="Elephant Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="e205-118c-9e0f-3c51">
       <characteristics>
         <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
         <characteristic name="Move" typeId="7e97-86ba-d955-1777">8&quot;/12&quot;</characteristic>
@@ -1748,7 +2696,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
     <profile name="Chaingun - Warthog" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="caca-fdbf-6eeb-43f6">
       <characteristics>
         <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
-        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (2)</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+2)</characteristic>
         <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
         <characteristic name="AP" typeId="b639-e494-578f-979d">8</characteristic>
         <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
@@ -1789,11 +2737,6 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
     <profile name="Specialist Canisters" typeId="65d7-7a94-0584-2c1d" typeName="Unit Abilities" hidden="false" id="1a1e-158c-b101-1ac7">
       <characteristics>
         <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">Once per game turn, prior to any ranged attack being made, the Kodiak may choose to fire a specialist canister from it&apos;s Howitzer Cannon. If it does, the attack uses the profile of the VX7 Nerve Gas Canister instead.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Weapon Drop" typeId="65d7-7a94-0584-2c1d" typeName="Unit Abilities" hidden="false" id="74f0-a91a-f3c2-59a4">
-      <characteristics>
-        <characteristic name="Description" typeId="988c-46dd-99ad-1fb9">If this Element makes base contact with a Supply Drop or Objective, they may elect to swap their Small Arms for any of the other Weapon Drop weapons at no additional cost.</characteristic>
       </characteristics>
     </profile>
     <profile name="Howitzer Cannon - Kodiak" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="5986-f937-68c3-e8a0">
@@ -1840,7 +2783,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
     <profile name="Rapid Fire Coilguns - Longsword" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="d2e3-f06a-281d-87bb">
       <characteristics>
         <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
-        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (AIR)</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (FLY)</characteristic>
         <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
         <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
         <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
@@ -2016,7 +2959,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
     <profile name="Sniper Rifle - ODST" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="2d83-a5c5-b2af-7b16">
       <characteristics>
         <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/30&quot;</characteristic>
-        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Cooldown, Lock On, Pinpoint (INF)</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Cooldown, Lock On, Pinpoint (INF), Lethal (1)</characteristic>
         <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
         <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
         <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
@@ -2044,57 +2987,228 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         <characteristic name="Loadouts" typeId="45af-dd89-bc47-d2af">Active Overwatch, Battle Hardened (2), Heroic Save (3+), First In</characteristic>
       </characteristics>
     </profile>
+    <profile name="Pelican Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="de84-922f-daaa-d53b">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Flyer</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">ASF</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">4</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">-</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">-</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/6/5</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Dust Off</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Autocannon - Pelican" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="9a1a-2a1e-87bd-3dc1">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">10</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">6</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Missile Launchers - Pelican" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="c713-227e-7949-de54">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (INF)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">10</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">6</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">6</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Scorpion Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="e683-2ea8-418f-2f26">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armored</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">8&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">10/12</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">3</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/6/5</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1), Canister Shot</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Canister Shot - Scorpion" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="cedf-4385-1ec7-d09a">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">20&quot;/40&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM), Special (See Ability)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">18</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">4</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="High Velocity Cannon - Scorpion" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="e8c7-fd99-a842-0d79">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">20&quot;/40&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">18</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Machine Gun - Scorpion" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="f094-8f79-ff32-16b1">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/20&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+2)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">6</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">1</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Shortsword Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="575e-0b4a-8f4c-9c7e">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Flyer</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">ASF</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">4</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">-</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">-</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">4/4/4</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e"/>
+      </characteristics>
+    </profile>
+    <profile name="Autocannons - Shortsword" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="5a18-7714-fc26-2fa0">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (INF)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">14</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Napalm Bombs - Shortsword" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="5dc6-9c4b-94bd-cfa8">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">15&quot;/--</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (ARM), Flame</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">9</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">10</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Sun Devil Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="6e0e-1115-b1b8-f39b">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armored</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">8&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">10/12</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">3</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/6/5</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1), Scour The Skies</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Auto-Cannons - Sun Devil" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="f728-4fbf-5dea-50dd">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">20&quot;/40&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (FLY), Lock On</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">ALL</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">7</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">14</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Troop Transport Falcon Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="4303-736c-e9dd-0fb3">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Flyer</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">12&quot;/18&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">-</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">-</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">6/6</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e"/>
+      </characteristics>
+    </profile>
+    <profile name="Wolverine Element" typeId="0c2c-c815-5df5-7954" typeName="Element - Vehicles" hidden="false" id="342d-cb42-fa51-5bfe">
+      <characteristics>
+        <characteristic name="Type" typeId="044c-3a55-d55b-1709">Armoured</characteristic>
+        <characteristic name="Move" typeId="7e97-86ba-d955-1777">10&quot;/12&quot;</characteristic>
+        <characteristic name="Soak" typeId="3edc-f3a4-a208-a322">3</characteristic>
+        <characteristic name="React" typeId="ce4c-bb8e-a67d-95d3">8/10</characteristic>
+        <characteristic name="Impact" typeId="8fff-2157-7e90-7dd9">2</characteristic>
+        <characteristic name="Damage" typeId="337d-b81a-5845-7b97">5/4/4</characteristic>
+        <characteristic name="Loadouts" typeId="4e40-04b5-91dd-f57e">Aerial Insertion (1), Scour The Skies</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Missile Pods - Wolverine" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="d525-630a-d5fb-3a9b">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">18&quot;/24&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Devastating (FLY), Lock On</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">All</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">2</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">7</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">11</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Grenade Launcher - Wolverine" typeId="6c7a-4fe3-9ca0-168a" typeName="Unit Weapons" hidden="false" id="dbdd-9134-c411-7b6a">
+      <characteristics>
+        <characteristic name="Range" typeId="b105-0b2d-c20d-2f77">10&quot;/12&quot;</characteristic>
+        <characteristic name="Weapon Loadouts" typeId="7758-d23e-b312-134e">Suppression (+1)</characteristic>
+        <characteristic name="Arc" typeId="dc58-10d6-a1f0-3f09">FRONT</characteristic>
+        <characteristic name="AP" typeId="b639-e494-578f-979d">4</characteristic>
+        <characteristic name="AT" typeId="9217-7144-1e94-683d">3</characteristic>
+        <characteristic name="AA" typeId="70d2-0215-d018-d05e">0</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Optional Armoured" id="14de-2e50-83e2-1c58" hidden="false" collapsible="true">
+    <selectionEntryGroup name="Optional Armoured" id="e3f5-3826-0250-f6b3" hidden="false" collapsible="true">
       <entryLinks>
-        <entryLink import="true" name="UNSC Cyclops" hidden="false" id="f4e6-2d8e-8445-d196" type="selectionEntry" targetId="14af-507b-e28e-d7c2"/>
-        <entryLink import="true" name="UNSC Elephant" hidden="false" id="ec1c-009a-977f-3610" type="selectionEntry" targetId="aa05-32ee-5893-6479"/>
-        <entryLink import="true" name="UNSC Kodiak" hidden="false" id="1af5-a468-e7be-a3bc" type="selectionEntry" targetId="4afa-1e4e-bc47-6614"/>
-        <entryLink import="true" name="UNSC Gauss Warthog" hidden="false" id="d6ac-b17b-759d-5153" type="selectionEntry" targetId="fac9-3698-f3d5-1ef2"/>
-        <entryLink import="true" name="UNSC Rocket Warthog" hidden="false" id="90a4-a5bc-990b-340e" type="selectionEntry" targetId="4bf4-3f24-9909-fa42"/>
-        <entryLink import="true" name="UNSC Warthog" hidden="false" id="2043-4595-c033-4c05" type="selectionEntry" targetId="2c2f-f97c-8a0d-09e5"/>
-        <entryLink import="true" name="UNSC Troop Warthog" hidden="false" id="9d01-5120-d11a-34a2" type="selectionEntry" targetId="3e26-5973-9647-07bd"/>
-        <entryLink import="true" name="UNSC Mantis" hidden="false" id="d641-ec82-908a-e1f8" type="selectionEntry" targetId="0178-081e-4f65-56e8"/>
-        <entryLink import="true" name="UNSC Mastodon" hidden="false" id="a43a-49a6-da3a-64be" type="selectionEntry" targetId="5a7a-535e-2653-04d0"/>
-        <entryLink import="true" name="UNSC Mongoose" hidden="false" id="e8c6-8d7f-fb4e-46bf" type="selectionEntry" targetId="0122-3aad-4047-8130"/>
+        <entryLink import="true" name="UNSC Cyclops" hidden="false" id="b03d-433f-f769-ad5f" type="selectionEntry" targetId="14af-507b-e28e-d7c2"/>
+        <entryLink import="true" name="UNSC Elephant" hidden="false" id="7c7f-71f5-fe45-4900" type="selectionEntry" targetId="aa05-32ee-5893-6479"/>
+        <entryLink import="true" name="UNSC Kodiak" hidden="false" id="0f91-0f75-5f2c-d9a0" type="selectionEntry" targetId="4afa-1e4e-bc47-6614"/>
+        <entryLink import="true" name="UNSC Gauss Warthog" hidden="false" id="3d81-74d4-65f0-c68f" type="selectionEntry" targetId="fac9-3698-f3d5-1ef2"/>
+        <entryLink import="true" name="UNSC Rocket Warthog" hidden="false" id="c03d-8edd-f62a-a244" type="selectionEntry" targetId="4bf4-3f24-9909-fa42"/>
+        <entryLink import="true" name="UNSC Warthog" hidden="false" id="7f14-15b5-d21c-eb97" type="selectionEntry" targetId="2c2f-f97c-8a0d-09e5"/>
+        <entryLink import="true" name="UNSC Troop Warthog" hidden="false" id="c11e-bd81-f992-1252" type="selectionEntry" targetId="3e26-5973-9647-07bd"/>
+        <entryLink import="true" name="UNSC Mantis" hidden="false" id="b238-313d-ee0a-a846" type="selectionEntry" targetId="0178-081e-4f65-56e8"/>
+        <entryLink import="true" name="UNSC Mastodon" hidden="false" id="9377-5791-bf75-95d2" type="selectionEntry" targetId="5a7a-535e-2653-04d0"/>
+        <entryLink import="true" name="UNSC Mongoose" hidden="false" id="f09f-079f-56ed-6f00" type="selectionEntry" targetId="0122-3aad-4047-8130"/>
+        <entryLink import="true" name="UNSC Scorpion" hidden="false" id="75c5-e570-8085-ec7f" type="selectionEntry" targetId="7290-3a21-b791-a105"/>
+        <entryLink import="true" name="UNSC Sun Devil" hidden="false" id="ec80-6447-2d94-cc5b" type="selectionEntry" targetId="e9af-97fa-1386-cb9e"/>
+        <entryLink import="true" name="UNSC Wolverine" hidden="false" id="4f41-6112-3022-aa55" type="selectionEntry" targetId="00a3-b7c1-4e5a-5f1e"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Optional Flyers" id="ed50-00c4-ea4c-2bd9" hidden="false" collapsible="true">
+    <selectionEntryGroup name="Optional Flyers" id="c9bb-efb0-5342-62ef" hidden="false" collapsible="true">
       <entryLinks>
-        <entryLink import="true" name="UNSC Assault Falcon" hidden="false" id="8d95-8c52-1f87-a527" type="selectionEntry" targetId="bedf-9841-25f9-44a4"/>
-        <entryLink import="true" name="UNSC Condor" hidden="false" id="b18a-6ef4-20ff-8876" type="selectionEntry" targetId="def6-28ca-da75-f7c3"/>
-        <entryLink import="true" name="UNSC Longsword" hidden="false" id="b3c1-edcc-c40b-4340" type="selectionEntry" targetId="731d-5747-2626-a89e"/>
+        <entryLink import="true" name="UNSC Assault Falcon" hidden="false" id="d07e-a6f7-9931-e18a" type="selectionEntry" targetId="bedf-9841-25f9-44a4"/>
+        <entryLink import="true" name="UNSC Condor" hidden="false" id="8ebb-f9ea-60ec-84db" type="selectionEntry" targetId="def6-28ca-da75-f7c3"/>
+        <entryLink import="true" name="UNSC Longsword" hidden="false" id="ebb2-4d3f-c0ca-a0d1" type="selectionEntry" targetId="731d-5747-2626-a89e"/>
+        <entryLink import="true" name="UNSC Shortsword" hidden="false" id="a289-5cac-93ba-0326" type="selectionEntry" targetId="ba21-c304-596d-c7ad"/>
+        <entryLink import="true" name="UNSC Troop Transport Falcon" hidden="false" id="9501-08c8-9a02-6ed8" type="selectionEntry" targetId="4f24-e6a3-1f9b-7a42"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Optional Infantry" id="e5ef-991b-0183-dcd2" hidden="false" collapsible="true">
+    <selectionEntryGroup name="Optional Infantry" id="28d3-b0b4-398a-9349" hidden="false" collapsible="true">
       <entryLinks>
-        <entryLink import="true" name="UNSC Officer" hidden="false" id="123c-68e3-7693-8e8d" type="selectionEntry" targetId="6303-b796-46f0-7346" flatten="false" collective="false" collapsible="true">
+        <entryLink import="true" name="UNSC Officer" hidden="false" id="b042-ca52-5b45-2d88" type="selectionEntry" targetId="6303-b796-46f0-7346" flatten="false" collective="false" collapsible="true">
           <categoryLinks>
-            <categoryLink name="3. Infantry Units" hidden="false" id="63fd-9a61-c2cd-6e8d" targetId="870a-81aa-e07c-3d01" primary="false"/>
+            <categoryLink name="3. Infantry Units" hidden="false" id="b675-c2e9-b111-8323" targetId="870a-81aa-e07c-3d01" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink import="true" name="UNSC Reserves" hidden="false" id="eb1e-0dcd-5a12-e5c5" type="selectionEntry" targetId="e043-a7f1-5c37-0596" flatten="false" collective="false" collapsible="true">
+        <entryLink import="true" name="UNSC Reserves" hidden="false" id="eb15-8042-7dc2-082c" type="selectionEntry" targetId="e043-a7f1-5c37-0596" flatten="false" collective="false" collapsible="true">
           <categoryLinks>
-            <categoryLink name="3. Infantry Units" hidden="false" id="63c6-c008-7b55-05da" targetId="870a-81aa-e07c-3d01" primary="false"/>
+            <categoryLink name="3. Infantry Units" hidden="false" id="edf4-b52d-0216-a102" targetId="870a-81aa-e07c-3d01" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink import="true" name="UNSC Rifleman" hidden="false" id="13ce-19d5-4436-d984" type="selectionEntry" targetId="fc77-7847-2844-8684" flatten="false" collective="false" collapsible="true">
+        <entryLink import="true" name="UNSC Rifleman" hidden="false" id="975d-0843-b778-f4d3" type="selectionEntry" targetId="fc77-7847-2844-8684" flatten="false" collective="false" collapsible="true">
           <categoryLinks>
-            <categoryLink name="3. Infantry Units" hidden="false" id="3f37-0039-88db-3195" targetId="870a-81aa-e07c-3d01" primary="false"/>
+            <categoryLink name="3. Infantry Units" hidden="false" id="25cf-dce7-11ae-e2c8" targetId="870a-81aa-e07c-3d01" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink import="true" name="UNSC Spartan" hidden="false" id="a3a9-e312-802c-5ad1" type="selectionEntry" targetId="ed80-90c7-1c6d-a9fb" flatten="false" collective="false" collapsible="true">
+        <entryLink import="true" name="UNSC Spartan" hidden="false" id="1e66-0017-7f19-109e" type="selectionEntry" targetId="ed80-90c7-1c6d-a9fb" flatten="false" collective="false" collapsible="true">
           <categoryLinks>
-            <categoryLink name="3. Infantry Units" hidden="false" id="f55f-2a3b-0e8f-cf89" targetId="870a-81aa-e07c-3d01" primary="false"/>
+            <categoryLink name="3. Infantry Units" hidden="false" id="f765-43e7-10ef-2009" targetId="870a-81aa-e07c-3d01" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink import="true" name="UNSC Recon Team" hidden="false" id="a550-4994-7217-6f5a" type="selectionEntry" targetId="53b2-09b0-a811-fac1"/>
-        <entryLink import="true" name="UNSC Ranger Team" hidden="false" id="8eb8-ecbe-1248-ec93" type="selectionEntry" targetId="7ba1-d44b-5f6f-9d25"/>
-        <entryLink import="true" name="UNSC Engineers" hidden="false" id="0aa0-ab7a-298d-758e" type="selectionEntry" targetId="9ea9-8781-c781-1335"/>
-        <entryLink import="true" name="UNSC Fire Support" hidden="false" id="f77a-d050-c447-63b7" type="selectionEntry" targetId="51c5-1426-4bd9-1679"/>
-        <entryLink import="true" name="UNSC ODST Air Assault " hidden="false" id="2123-62e4-f5b0-4d7a" type="selectionEntry" targetId="3420-7b65-598b-83e4"/>
-        <entryLink import="true" name="UNSC ODST Fireteam" hidden="false" id="bfe8-2a15-00dd-9555" type="selectionEntry" targetId="f071-2a1b-7142-087a"/>
+        <entryLink import="true" name="UNSC Recon Team" hidden="false" id="6094-88c4-c54d-954e" type="selectionEntry" targetId="53b2-09b0-a811-fac1"/>
+        <entryLink import="true" name="UNSC Ranger Team" hidden="false" id="f6df-48fc-3532-3856" type="selectionEntry" targetId="7ba1-d44b-5f6f-9d25"/>
+        <entryLink import="true" name="UNSC Engineers" hidden="false" id="dcec-1791-87b2-508d" type="selectionEntry" targetId="9ea9-8781-c781-1335"/>
+        <entryLink import="true" name="UNSC Fire Support" hidden="false" id="9957-b4b3-af89-7fc6" type="selectionEntry" targetId="51c5-1426-4bd9-1679"/>
+        <entryLink import="true" name="UNSC ODST Air Assault " hidden="false" id="9412-5270-3625-4a85" type="selectionEntry" targetId="3420-7b65-598b-83e4"/>
+        <entryLink import="true" name="UNSC ODST Fireteam" hidden="false" id="9c61-57b7-5a45-d7d1" type="selectionEntry" targetId="f071-2a1b-7142-087a"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
