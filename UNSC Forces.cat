@@ -2253,7 +2253,7 @@ Issue this order to a unit. That unit may re-roll failed Maintenance checks. The
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Optional Units" hidden="false" id="f2a8-2e00-0a57-5d97">
           <constraints>
-            <constraint type="max" value="0" field="030f-722a-166e-6138" scope="parent" shared="true" id="0719-a6be-1893-388e" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="030f-722a-166e-6138" scope="parent" shared="true" id="0719-a6be-1893-388e" includeChildSelections="true"/>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b04c-de80-124e-8150-min"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b04c-de80-124e-8150-max"/>
           </constraints>
