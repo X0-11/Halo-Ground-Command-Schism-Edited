@@ -340,6 +340,10 @@ Cost 2VP to use on Armoured units.</characteristic>
       <infoLinks>
         <infoLink name="Death From Above" id="9684-4693-dd50-6af9" hidden="false" type="profile" targetId="bdd9-b480-eac1-dca5"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fac2-55e2-ca8c-2fd7"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0ee8-85b1-40d5-b63e"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>

@@ -1372,7 +1372,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Rocket/Sniper Weapons Team" hidden="false" id="4858-1dad-698c-3ca0">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Rocket Launcher" hidden="false" id="987e-22e5-7a9c-0d9a">
+            <selectionEntry type="upgrade" import="true" name="Rocket Launcher" hidden="false" id="987e-22e5-7a9c-0d9a" defaultAmount="1">
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="ODST Fireteam Element" hidden="false" id="4c8b-9db5-1ea7-1016" defaultAmount="1">
                   <infoLinks>
@@ -1391,7 +1391,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
                 <constraint type="max" value="1" field="selections" scope="self" shared="true" id="169d-fe95-b989-1a2e"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="cec2-a1c1-b4dd-e128">
+            <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="cec2-a1c1-b4dd-e128" defaultAmount="0">
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="ODST Fireteam Element" hidden="false" id="25a5-c4a7-013f-dd4b" defaultAmount="1">
                   <infoLinks>
@@ -1421,6 +1421,7 @@ Once per Game Turn, a UNSC commander may allow a single UNSC unit to automatical
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="483a-8c7e-25dc-71d2"/>
             <constraint type="min" value="1" field="selections" scope="self" shared="true" id="068c-7eff-4138-af27-min"/>
             <constraint type="max" value="1" field="selections" scope="self" shared="true" id="068c-7eff-4138-af27-max"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f919-af2e-8920-3fd7"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -2216,7 +2217,7 @@ Issue this order to a unit. That unit may re-roll failed Maintenance checks. The
       <selectionEntryGroups>
         <selectionEntryGroup name="Requisite Units" id="31b2-2fd7-f764-8f0a" hidden="false" flatten="false" collapsible="true">
           <entryLinks>
-            <entryLink import="true" name="UNSC ODST Air Assault " hidden="false" id="1d57-feb5-e400-cf8b" type="selectionEntry" targetId="3420-7b65-598b-83e4">
+            <entryLink import="true" name="UNSC ODST Air Assault " hidden="false" id="1d57-feb5-e400-cf8b" type="selectionEntry" targetId="3420-7b65-598b-83e4" defaultAmount="2">
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d4d0-b572-2400-36fa"/>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4e1c-5239-4880-fb1e"/>
@@ -2229,7 +2230,7 @@ Issue this order to a unit. That unit may re-roll failed Maintenance checks. The
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="UNSC ODST Fireteam" hidden="false" id="d514-21d9-6799-33da" type="selectionEntry" targetId="f071-2a1b-7142-087a">
+            <entryLink import="true" name="UNSC ODST Fireteam" hidden="false" id="d514-21d9-6799-33da" type="selectionEntry" targetId="f071-2a1b-7142-087a" defaultAmount="0">
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7b02-4ecb-fc89-461b"/>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="777a-c5d4-902c-bdc2"/>
